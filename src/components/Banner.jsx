@@ -11,7 +11,7 @@ const Banner = () => {
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
-          w="1512px"
+          w="100%"
           h="100%"
           p={8}
         >

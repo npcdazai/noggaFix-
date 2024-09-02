@@ -21,13 +21,13 @@ const circlesData = [
 const Hero = () => {
   return (
     <div>
-      <Box bgColor="black" h="70vh">
+      <Box bgColor="black" h="100%">
         <Flex
           justifyContent="space-between"
           spacing={4}
           alignItems="center"
           px={"4.4rem"}
-          py={5}
+          py={"5rem"}
         >
           <HStack wrap="wrap" w={"60%"} gap={"2rem"}>
             <Heading
