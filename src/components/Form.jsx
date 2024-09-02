@@ -90,7 +90,7 @@ const Form = () => {
         >
           Let's Collaborate to Shape Your Vision into Reality
         </Heading>
-        <Box w="100%">
+        <Box w="100%" display="flex" flexDirection="column" alignItems="center">
           <form onSubmit={handleSubmit(onSubmit)}>
             <FormControl display="flex" flexDirection="column" gap={4}>
               <Box
