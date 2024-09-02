@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
   Box,
   Button,
@@ -10,7 +10,7 @@ import {
   Image,
   Input,
   Select,
-  SelectField,
+  // SelectField,
   Slider,
   SliderFilledTrack,
   SliderThumb,
@@ -38,9 +38,9 @@ const Form = () => {
     console.log(data);
   };
 
-  const handleSliderChange = (value) => {
-    setSliderValue(value);
-  };
+  // const handleSliderChange = (value) => {
+  //   setSliderValue(value);
+  // };
   const handleClick = () => {
     document.getElementById("fileInput").click();
   };
@@ -88,7 +88,7 @@ const Form = () => {
           w="50%"
           py={"1rem"}
         >
-          Let's Collaborate to Shape Your Vision into Reality
+          Lets Collaborate to Shape Your Vision into Reality
         </Heading>
         <Box w="100%" display="flex" flexDirection="column" alignItems="center">
           <form onSubmit={handleSubmit(onSubmit)}>

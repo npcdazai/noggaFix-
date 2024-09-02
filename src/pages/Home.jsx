@@ -1,6 +1,4 @@
-import React from "react";
 import Hero from "../components/Hero";
-import { Box } from "@chakra-ui/react";
 import TimeLines from "../components/ui/TimeLines";
 import ServicesSection from "../components/ServiceSection";
 import Protfolio from "../components/PortFolio"
