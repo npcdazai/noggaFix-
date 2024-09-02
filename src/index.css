@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  font-family: "Manrope", sans-serif;
+  color: #e8155d;
+  background-color: black;
+}
+
+.Robo {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.pinkcolor {
+  background-color: #e8155d;
+}
+.box-after-style::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 6px;
+  background: var(--orange);
+  bottom: 0;
+  left: 0;
+  transition: 0.8s;
+  border-radius: 0 0 10px;
+}
