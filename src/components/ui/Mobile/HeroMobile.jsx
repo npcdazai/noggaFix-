@@ -26,14 +26,14 @@ const Hero = () => {
           direction={{ base: "column", md: "row" }} // Stack in column on mobile, row on larger screens
           wrap="wrap"
           w="100%"
-          gap={{ base: "1rem", md: "2rem" }} // Adjust gap for mobile view
+          gap={{ base: "5px", md: "2rem" }} // Adjust gap for mobile view
           alignItems="center"
           textAlign={{ base: "center", md: "center" }} // Center text on mobile
         >
           <Heading
             color="#e8155d"
-            lineHeight="35px"
-            fontWeight={600}
+            lineHeight="25px"
+            fontWeight={500}
             fontSize={{ base: "md", md: "lg" }} // Adjust font size for mobile view
             flexDirection="column"
           >

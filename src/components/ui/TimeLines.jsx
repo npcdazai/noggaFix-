@@ -20,7 +20,13 @@ const timelineData = [
 const TimeLines = () => {
   return (
     <div>
-      <Box bgColor="black" w="100%" px="4rem" h="100%">
+      <Box
+        display={{ base: "none", lg: "block" }}
+        bgColor="black"
+        w="100%"
+        px="4rem"
+        h="100%"
+      >
         <Box
           bgColor="#D9D9D91A"
           display="flex"
@@ -104,7 +110,12 @@ const TimeLines = () => {
                         alignItems="center"
                         justifyContent="center"
                       >
-                        <Box display="flex" flexDirection="column" alignItems="center" mr="8rem">
+                        <Box
+                          display="flex"
+                          flexDirection="column"
+                          alignItems="center"
+                          mr="8rem"
+                        >
                           <Text fontSize="sm" color="white">
                             {item.date}
                           </Text>

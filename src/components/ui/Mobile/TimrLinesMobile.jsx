@@ -45,9 +45,9 @@ import {
               display="flex"
               flexDirection="column"
             >
-              <Image w={"100%"} src={lineBar} />
+              <Image w={"100%"} h={"600px"} src={lineBar} transform="rotate(90deg)" />
               <Flex
-                direction={{ base: "column", md: "row" }}  // Adjust direction based on screen size
+                direction={{ base: "column", md: "row" }}  
                 w="100%"
                 px="3rem"
                 justify="space-between"
@@ -90,9 +90,9 @@ import {
                           bgColor="#E5195E42"
                         />
     
-                        <Box
+                        {/* <Box
                           display="flex"
-                          w="220.85px"
+                          w="100%"
                           h="104.29px"
                           flexDirection="row"
                           position="relative"
@@ -107,7 +107,7 @@ import {
                               {item.phase}
                             </Text>
                           </Box>
-                        </Box>
+                        </Box> */}
                       </Box>
                     </Tooltip>
                   </Flex>

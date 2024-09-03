@@ -14,6 +14,7 @@ import FooterCom from "../components/FooterCom";
 import { useBreakpointValue } from "@chakra-ui/react";
 import HeroMobile from "../components/ui/Mobile/HeroMobile";
 import TimeLinesMobile from "../components/ui/Mobile/TimrLinesMobile";
+import ServiceMobile from "../components/ui/Mobile/ServiceMobile"
 
 const Home = () => {
   const heroComponent = useBreakpointValue({
@@ -21,18 +22,18 @@ const Home = () => {
     lg: <Hero />,
   });
 
-  const timeLines = useBreakpointValue({
-    base :<TimeLinesMobile/>,
-    lg :<TimeLines/>
+  const service = useBreakpointValue({
+    base :<ServiceMobile/>,
+    lg :<ServicesSection/>
   })
 
   return (
     <>
       {heroComponent}
-      {timeLines}
-      {/* <TimeLines />
-      <ServicesSection />
-      <Protfolio /> */}
+      <TimeLines />
+      {service}
+      {/* <ServicesSection /> */}
+      <Protfolio />
       {/* <Teach />
       <Testi />
       <Awards />
