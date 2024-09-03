@@ -34,6 +34,8 @@ const Form = () => {
     trigger,
   } = useForm();
 
+  // console.error(errors);
+  
   const onSubmit = (data) => {
     console.log(data);
   };

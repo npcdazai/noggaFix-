@@ -32,16 +32,15 @@ const Home = () => {
       {heroComponent}
       <TimeLines />
       {service}
-      {/* <ServicesSection /> */}
-      {/* <Protfolio /> */}
-      {/* <Teach />
+      <Protfolio />
+      <Teach />
       <Testi />
       <Awards />
       <Banner />
       <Form />
       <FAQs />
       <Footer />
-      <FooterCom /> */}
+      <FooterCom />
     </>
   );
 };
