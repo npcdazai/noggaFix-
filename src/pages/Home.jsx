@@ -34,14 +34,14 @@ const Home = () => {
       {service}
       {/* <ServicesSection /> */}
       <Protfolio />
-      {/* <Teach />
+      <Teach />
       <Testi />
       <Awards />
       <Banner />
       <Form />
       <FAQs />
       <Footer />
-      <FooterCom /> */}
+      <FooterCom />
     </>
   );
 };
