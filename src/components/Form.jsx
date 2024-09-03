@@ -38,9 +38,7 @@ const Form = () => {
     console.log(data);
   };
 
-  // const handleSliderChange = (value) => {
-  //   setSliderValue(value);
-  // };
+
   const handleClick = () => {
     document.getElementById("fileInput").click();
   };
@@ -91,7 +89,9 @@ const Form = () => {
           Lets Collaborate to Shape Your Vision into Reality
         </Heading>
         <Box w="100%" display="flex" flexDirection="column" alignItems="center">
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form
+          //  onSubmit={handleSubmit(onSubmit)}
+           >
             <FormControl display="flex" flexDirection="column" gap={4}>
               <Box
                 display="grid"
@@ -233,44 +233,7 @@ const Form = () => {
                     </Text>
                   )}
                 </Box>
-                {/* <Box w="100%" maxW="570px">
-                  <FormLabel color="#FFFFFF">Attach file</FormLabel>
-                  <Input
-                    id="fileInput"
-                    type="file"
-                    {...register("fileInput", {
-                      validate: (file) =>
-                        file &&
-                        ["image/png", "image/jpeg", "application/pdf"].includes(
-                          file.type
-                        ) &&
-                        file.size <= 5 * 1024 * 1024
-                          ? true
-                          : "Invalid file type or size. Only PNG, JPEG, and PDF files under 5MB are allowed.",
-                    })}
-                    onChange={handleChange}
-                    display="none"
-                  />
-                  <Button
-                    onClick={handleClick}
-                    leftIcon={<Icon as={FiPaperclip} />}
-                    variant="outline"
-                    bg="#E5195E12"
-                    border="1px solid #E5195E"
-                    borderRadius="10px"
-                    size="md"
-                    _hover={{ bg: "#E5195E12" }}
-                    w="100%"
-                    color="#fff"
-                  >
-                    Attach file
-                  </Button>
-                  {errors.fileInput && (
-                    <Text color="red.400" mt={2}>
-                      {errors.fileInput.message}
-                    </Text>
-                  )}
-                </Box> */}
+      
                 <Box w="100%" maxW="570px">
                   <FormLabel color="#FFFFFF">Attach file</FormLabel>
                   <Input
@@ -335,10 +298,11 @@ const Form = () => {
                   }}
                   colorScheme="pink"
                 >
-                  <SliderTrack bg="gray.700" height="2px">
+                  <SliderTrack bg="#999999" height="2px">
                     <SliderFilledTrack bg="#E5195E" />
                   </SliderTrack>
-                  <SliderThumb boxSize={5} bg="#E5195E"></SliderThumb>
+                  <SliderThumb boxSize={4} bg="#E5195E">
+                  </SliderThumb>
                 </Slider>
                 {errors.budget && (
                   <Text color="red.400" mt={2}>
@@ -361,7 +325,7 @@ const Form = () => {
                           w="8.34px"
                           h="8.34px"
                           px="0"
-                          marginTop="-3rem"
+                          marginTop="-2.8rem"
                           position="relative"
                           mb={"3rem"}
                           bg={sliderValue >= val ? "#E5195E" : "gray.600"}
@@ -412,6 +376,7 @@ const Form = () => {
                   h="55px"
                   borderRadius="0px"
                   type="submit"
+                  onClick={handleSubmit(onSubmit)}
                 >
                   Submit
                 </Button>

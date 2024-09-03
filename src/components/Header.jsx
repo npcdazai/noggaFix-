@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <div style={{ position: "sticky", top: 0, zIndex: 100 }}>
-      <Box w={"100vw"}>
+      <Box w={"100%"}>
         <Flex
           bgColor="black"
           borderBottom="1px solid #5C5C5C"
@@ -72,6 +72,7 @@ const Header = () => {
               borderRadius="0px"
               textColor="white"
               className="pinkcolor"
+              display={{base:"none", md:"block"}}
             >
               Contact Us
             </Button>

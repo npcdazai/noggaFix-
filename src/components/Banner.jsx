@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import banner from "../assets/handvector.png";
 import text from "../assets/text.png";
 import Button from "../components/ui/Button"

@@ -12,7 +12,7 @@ import Footer from "../components/Footer"
 import FooterCom from "../components/FooterCom";
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <TimeLines/>
       <ServicesSection/>
@@ -25,7 +25,7 @@ const Home = () => {
       <FAQs/>
       <Footer/>
       <FooterCom/>
-    </div>
+    </>
   );
 };
 

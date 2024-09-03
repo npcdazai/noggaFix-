@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import banner from "../assets/images/banner.png";
 import whiteCircle from "../assets/white.png";
 import pinkCircle from "../assets/pink.png";
@@ -20,8 +12,7 @@ const circlesData = [
 
 const Hero = () => {
   return (
-    <div>
-      <Box bgColor="black" h="100%">
+      <Box bgColor="black" h="100%" width={["25%", "50%", "100%"]} >
         <Flex
           justifyContent="space-between"
           spacing={4}
@@ -35,6 +26,7 @@ const Hero = () => {
               lineHeight="40.88px"
               fontWeight={600}
               fontSize="40px"
+              flexDirection={{base:"column" , lg:"row"}}
             >
               Develop AI-Powered solutions with the leading mobile
             </Heading>
@@ -47,7 +39,13 @@ const Hero = () => {
               Develop AI-Powered solutions with the leading mobile solutions
               with the leading mobile
             </Text>
-            <Box w={"100%"} display="flex" flexDirection="row" position="relative" alignItems="center">
+            <Box
+              w={"100%"}
+              display="flex"
+              flexDirection="row"
+              position="relative"
+              alignItems="center"
+            >
               {circlesData.map((circle, index) => (
                 <Box
                   key={circle.id}
@@ -56,7 +54,11 @@ const Hero = () => {
                   alignItems="center"
                   w={"158.06px"}
                   h="158.06px"
-                  right={`${index * 8}px`}
+                  right={{
+                    base: `${index * 4}px`,
+                    md: `${index * 8}px`, 
+                    lg: `${index * 12}px`,
+                  }}
                 >
                   <Image
                     src={circle.image}
@@ -88,7 +90,6 @@ const Hero = () => {
           </Box>
         </Flex>
       </Box>
-    </div>
   );
 };
 
