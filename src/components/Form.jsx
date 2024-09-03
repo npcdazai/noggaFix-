@@ -1,7 +1,8 @@
-import  { useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Button,
+  Container,
   Flex,
   FormControl,
   FormLabel,
@@ -10,7 +11,6 @@ import {
   Image,
   Input,
   Select,
-  // SelectField,
   Slider,
   SliderFilledTrack,
   SliderThumb,
@@ -24,7 +24,7 @@ import captcha from "../assets/captcha.png";
 
 const Form = () => {
   const [sliderValue, setSliderValue] = useState(0);
-  const [fileAdded , setFileAdded] = useState(false)
+  const [fileAdded, setFileAdded] = useState(false);
 
   const {
     register,
@@ -34,12 +34,9 @@ const Form = () => {
     trigger,
   } = useForm();
 
-  // console.error(errors);
-  
   const onSubmit = (data) => {
     console.log(data);
   };
-
 
   const handleClick = () => {
     document.getElementById("fileInput").click();
@@ -69,37 +66,39 @@ const Form = () => {
   };
 
   return (
-    <Box bg="black" p="4rem" w="100vw">
+    <Container p={{ base: "1rem", lg: "3rem" }} bg="black" maxW="container.xxl">
       <Box
         bg="#0F0F0F"
         display="flex"
         flexDirection="column"
         alignItems="center"
         w="100%"
-        px="4rem"
+        // px={{ base: "2rem", md: "4rem" }}
         py="2rem"
       >
         <Heading
           fontWeight="600"
           lineHeight="57.4px"
-          fontSize="40px"
+          fontSize={{ base: "30px", md: "40px" }}
           textAlign="center"
           color="#FBFBFB"
-          w="50%"
+          w={{ base: "100%", md: "75%", lg: "50%" }}
           py={"1rem"}
+         
         >
-          Lets Collaborate to Shape Your Vision into Reality
+          Let’s Collaborate to Shape Your Vision into Reality
         </Heading>
-        <Box w="100%" display="flex" flexDirection="column" alignItems="center">
-          <form
-          //  onSubmit={handleSubmit(onSubmit)}
-           >
-            <FormControl display="flex" flexDirection="column" gap={4}>
+        {/* <Box display="flex" flexDirection="column" alignItems="center"> */}
+          {/* <form> */}
+            <FormControl display="flex" flexDirection="column" alignItems="center" gap={4} w="100%">
               <Box
+               px={"4rem"}
+              // backgroundColor="red"
                 display="grid"
-                gridTemplateColumns="repeat(2, 1fr)"
-                gap={2}
+                gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+                gap={4}
                 justifyItems="center"
+                w="100%"
               >
                 {[
                   { label: "Enter your name", type: "text", name: "name" },
@@ -114,7 +113,7 @@ const Form = () => {
                     name: "contact",
                   },
                 ].map((field, index) => (
-                  <Box w="100%" maxW="570px" key={index}>
+                  <Box w="100%" key={index}>
                     <FormLabel color="#FFFFFF">{field.label}</FormLabel>
                     <Input
                       {...register(field.name, {
@@ -155,7 +154,7 @@ const Form = () => {
                     name: "source",
                   },
                 ].map((selectField, index) => (
-                  <Box w="100%" maxW="570px" key={index + 3}>
+                  <Box w="100%"  key={index + 3}>
                     <FormLabel color="#FFFFFF">{selectField.label}</FormLabel>
                     <Select
                       {...register(selectField.name, {
@@ -184,7 +183,7 @@ const Form = () => {
                 ))}
               </Box>
 
-              <Box w="100%" maxW="1186px">
+              <Box w="100%"  px={"4rem"}>
                 <FormLabel color="#FFFFFF">
                   Tell us about your project and business challenge.
                 </FormLabel>
@@ -208,11 +207,13 @@ const Form = () => {
 
               <Box
                 display="grid"
-                gridTemplateColumns="repeat(2, 1fr)"
+                gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
                 gap={5}
                 justifyItems="center"
+                w="100%"
+                px={"4rem"}
               >
-                <Box w="100%" maxW="570px">
+                <Box w="100%">
                   <FormLabel color="#FFFFFF">
                     When would you like to start
                   </FormLabel>
@@ -235,8 +236,8 @@ const Form = () => {
                     </Text>
                   )}
                 </Box>
-      
-                <Box w="100%" maxW="570px">
+
+                <Box w="100%">
                   <FormLabel color="#FFFFFF">Attach file</FormLabel>
                   <Input
                     id="fileInput"
@@ -253,7 +254,7 @@ const Form = () => {
                     })}
                     onChange={(e) => {
                       handleChange(e);
-                      setFileAdded(true); 
+                      setFileAdded(true);
                     }}
                     display="none"
                   />
@@ -296,15 +297,14 @@ const Form = () => {
                   value={sliderValue}
                   onChange={(value) => {
                     setSliderValue(value);
-                    setValue("budget", value); 
+                    setValue("budget", value);
                   }}
                   colorScheme="pink"
                 >
                   <SliderTrack bg="#999999" height="2px">
                     <SliderFilledTrack bg="#E5195E" />
                   </SliderTrack>
-                  <SliderThumb boxSize={4} bg="#E5195E">
-                  </SliderThumb>
+                  <SliderThumb boxSize={4} bg="#E5195E"></SliderThumb>
                 </Slider>
                 {errors.budget && (
                   <Text color="red.400" mt={2}>
@@ -371,10 +371,11 @@ const Form = () => {
                 </Box>
               </Box>
 
-              <Box px="5rem">
+              <Box w="100%" display="flex" justifyContent="center">
                 <Button
                   bg="#E5195E"
-                  w="912px"
+                  w="100%"
+                  maxW="912px"
                   h="55px"
                   borderRadius="0px"
                   type="submit"
@@ -384,10 +385,10 @@ const Form = () => {
                 </Button>
               </Box>
             </FormControl>
-          </form>
-        </Box>
+          {/* </form> */}
+        {/* </Box> */}
       </Box>
-    </Box>
+    </Container>
   );
 };
 

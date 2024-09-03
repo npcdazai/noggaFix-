@@ -22,14 +22,14 @@ const TabsComponent = () => {
   };
 
   return (
-    <Flex justifyContent="center" alignItems="center" p={"2rem"} w="100%">
+    <Flex justifyContent="center" alignItems="center" p="2rem" w="100%" >
       {tabs.map((tab) => (
         <Flex
           key={tab.id}
           alignItems="center"
           justifyContent="center"
           color={activeTab.id === tab.id ? "white" : "gray.400"}
-          px={"4rem"}
+          px={{ base: "2rem", md: "4rem" }}
           py={2}
           cursor="pointer"
           borderBottom={activeTab.id === tab.id ? "2px solid #E8155D" : "none"}

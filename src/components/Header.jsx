@@ -42,7 +42,7 @@ const Header = () => {
           bgColor="black"
           borderBottom="1px solid #5C5C5C"
           px={{ base: "0px", md: "1.5rem", lg: "2.5rem" }}
-          py={{ base: 1, md: 2, lg: 4 }}
+          py={{ base: 1, md: 1.3, lg: 2 }}
           justifyContent="space-between"
           alignItems="center"
         >

@@ -51,11 +51,8 @@ const TimeLines = () => {
             display="flex"
             flexDirection="column"
           >
-            {/* <Box
-              borderBottom="1px solid #E8155DD6"
-              w={"100%"}
-              py={"1rem"}
-            /> */}
+            
+      
             <Image w={"100%"} src={lineBar} />
             <Flex
               direction="row"
@@ -77,6 +74,7 @@ const TimeLines = () => {
                     placement="top"
                     px="8rem"
                   >
+                    
                     <Box
                       bottom="5rem"
                       as="button"
