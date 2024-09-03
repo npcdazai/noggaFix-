@@ -3,7 +3,7 @@ import React from "react";
 import CompactTable from "../components/ui/compactTabs";
 import htmlpng from "../assets/html.png";
 import reactjs from "../assets/react.png";
-import codeIgniter from "../assets/codeIgniter.png";
+import codeIgniter from "../assets/codeigniter.png";
 import java from "../assets/java.png";
 import anugular from "../assets/angular.png";
 import vue from "../assets/vue.png";
