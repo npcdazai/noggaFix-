@@ -21,7 +21,7 @@ const titles = [
   "Excellent ane timely execution",
   "State-of-the art infrastructure",
   "Integrity and sincerity ",
-  "A large team of developers"
+  "A large team of developers",
 ];
 
 const Header = () => {
@@ -36,43 +36,53 @@ const Header = () => {
   });
 
   return (
-    <div style={{ position: "sticky", top: 0, zIndex: 100 }}>
-      <Box w={"100%"}>
+    <div style={{ position: "sticky", top: 0, zIndex: 100, width: "100vw" }}>
+      <Box w="100%">
         <Flex
           bgColor="black"
           borderBottom="1px solid #5C5C5C"
-          px={"2.5rem"}
-          py={1}
+          px={{ base: "0px", md: "1.5rem", lg: "2.5rem" }}
+          py={{ base: 1, md: 2, lg: 4 }}
           justifyContent="space-between"
           alignItems="center"
         >
-          <Image ml="2rem" src={logo} h="67px" w="66px" alt="WDI" />
-          <Box w={"780px"} h={"66px"} textAlign="center" ml={4}>
+          <Image
+            ml={{ base: "10px", md: "1rem", lg: "2rem" }}
+            src={logo}
+            h={{ base: "40px", md: "50px", lg: "67px" }}
+            w="66px"
+            alt="WDI"
+          />
+          <Box
+            w={"100%"}
+            h={{ base: "30px", md: "50px", lg: "66px" }}
+            textAlign="center"
+            ml={{base :2, md : 3, lg:4}}
+          >
             <Text
               textColor="#e8155d"
               className="Robo"
-              fontSize="24px"
+              fontSize={{ base: "12px", md: "18px", lg: "24px" }}
               fontWeight={500}
               lineHeight="21.09px"
               animation={animation}
               textAlign="center"
-              py={6}
+              py={{ base: 3, md: 5, lg: 6 }}
             >
               {titles[currentIndex]}
             </Text>
           </Box>
           <NavLink>
             <Button
-            
               bgColor="#e8155d"
               _hover={{ bg: "#e8155d" }}
-              w={"166px"}
-              h={"50px"}
-              mr="2rem"
+              w={{ base: "85px", md: "70px", lg: "166px" }}
+              h={{ base: "25px", md: "35px", lg: "50px" }}
+              mr={{ base: "10px", md: "1rem", lg: "2rem" }}
               borderRadius="0px"
               textColor="white"
               className="pinkcolor"
-              display={{base:"none", md:"block"}}
+              fontSize={{base:"sm", md:"md",lg:"lg"}}
             >
               Contact Us
             </Button>

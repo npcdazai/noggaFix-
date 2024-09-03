@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import FooterCom from "../components/FooterCom";
 import { useBreakpointValue } from "@chakra-ui/react";
 import HeroMobile from "../components/ui/Mobile/HeroMobile";
+import TimeLinesMobile from "../components/ui/Mobile/TimrLinesMobile";
 
 const Home = () => {
   const heroComponent = useBreakpointValue({
@@ -20,20 +21,26 @@ const Home = () => {
     lg: <Hero />,
   });
 
+  const timeLines = useBreakpointValue({
+    base :<TimeLinesMobile/>,
+    lg :<TimeLines/>
+  })
+
   return (
     <>
       {heroComponent}
-      <TimeLines />
+      {timeLines}
+      {/* <TimeLines />
       <ServicesSection />
-      <Protfolio />
-      <Teach />
+      <Protfolio /> */}
+      {/* <Teach />
       <Testi />
       <Awards />
       <Banner />
       <Form />
       <FAQs />
       <Footer />
-      <FooterCom />
+      <FooterCom /> */}
     </>
   );
 };
