@@ -10,7 +10,6 @@ import wokalogo from "../assets/wokalogo.png";
 import regrouplogos from "../assets/regrouplogos.png";
 import hoeVector from "../assets/homelogo.png";
 function App() {
-  // Set the default image and text for box1
   const [selectedBox, setSelectedBox] = useState("box1");
   const [selectedText, setSelectedText] = useState("text1");
   const [selectedLogo, setSelectedLogo] = useState("logo1");
@@ -123,7 +122,7 @@ function App() {
                     boxShadow: "2xl",
                   }}
                 >
-                  <Image src={regrouplogo} w="103.44px" h="103.42px" />
+                  <Image src={regrouplogo} w="103.44px"  />
                 </Box>
               </motion.div>
 
