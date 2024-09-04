@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import qualityAssurance from "../assets/qualityAssurance.png";
 import costEffective from "../assets/costEffective.png";
@@ -34,7 +34,7 @@ const PortFolio = () => {
 
   return (
     <div>
-      <Box bgColor="black" display="flex" flexDirection="column" gap={8}>
+      <Container maxW="container.2xl" bgColor="black" display="flex" flexDirection="column" gap={3}>
         <Heading
           textAlign="center"
           fontWeight={600}
@@ -44,8 +44,8 @@ const PortFolio = () => {
           PortFolio
         </Heading>
         <Company />
-        <Box p="4rem" bgColor="black" display="flex" flexDirection="column">
-          <Box display="flex" flexDirection="column" gap={8}  py="14px">
+        <Box p="2rem" gap={4} bgColor="black" display="flex" flexDirection="column">
+          <Box display="flex" flexDirection="column" gap={4} >
 
             <Heading fontWeight={600} fontSize="40px" color="#FBFBFB">
               Inventing App For Superior Apps
@@ -99,9 +99,8 @@ const PortFolio = () => {
             ))}
           </Box>
         </Box>
-      </Box>
+      </Container>
     </div>
   );
 };
-
 export default PortFolio;

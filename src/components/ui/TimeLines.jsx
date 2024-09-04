@@ -1,6 +1,7 @@
 import {
   Box,
   Circle,
+  Container,
   Flex,
   Image,
   Text,
@@ -19,118 +20,114 @@ const timelineData = [
 
 const TimeLines = () => {
   return (
-    <div>
+    <Container
+      display={{ base: "none", lg: "block" }}
+      maxW="container.2xl"
+      bgColor="black"
+      px="2.8rem"
+      w="100%"
+      h="100%"
+    >
       <Box
-        display={{ base: "none", lg: "block" }}
-        bgColor="black"
-        w="100%"
-        px="4rem"
-        h="100%"
+        bgColor="#D9D9D91A"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        borderRadius="20px"
+        p={4}
       >
-        <Box
-          bgColor="#D9D9D91A"
+        <Text
+          fontWeight={500}
+          fontSize="28px"
+          lineHeight="37.71px"
+          color="#fff"
+        >
+          We Walk the Walk
+        </Text>
+        <Tabs />
+        {/* <Box
+          w="100%"
+          p={"4rem"}
+          mt={"2rem"}
           display="flex"
           flexDirection="column"
-          alignItems="center"
-          borderRadius="20px"
-          p={4}
         >
-          <Text
-            fontWeight={500}
-            fontSize="28px"
-            lineHeight="37.71px"
-            color="#fff"
-          >
-            We Walk the Walk
-          </Text>
-          <Tabs />
-          <Box
+          <Image w={"100%"} src={lineBar} />
+          <Flex
+            direction="row"
             w="100%"
-            p={"4rem"}
-            mt={"2rem"}
-            display="flex"
-            flexDirection="column"
+            px="3rem"
+            justify="space-between"
+            align="center"
           >
-            
-      
-            <Image w={"100%"} src={lineBar} />
-            <Flex
-              direction="row"
-              w="100%"
-              px="3rem"
-              justify="space-between"
-              align="center"
-            >
-              {timelineData.map((item, index) => (
-                <Flex key={index} direction="column" align="center">
-                  <Tooltip
-                    display="flex"
-                    alignItems="center"
-                    flexDirection="column"
-                    bgColor="#E8155D21"
-                    w="220.85px"
-                    h="104.29px"
-                    label={item.description}
-                    placement="top"
-                    px="8rem"
+            {timelineData.map((item, index) => (
+              <Flex key={index} direction="column" align="center">
+                <Tooltip
+                  display="flex"
+                  alignItems="center"
+                  flexDirection="column"
+                  bgColor="#E8155D21"
+                  w="220.85px"
+                  h="104.29px"
+                  label={item.description}
+                  placement="top"
+                  px="8rem"
+                >
+                  <Box
+                    bottom="5rem"
+                    as="button"
+                    borderRadius="50%"
+                    w="8.34px"
+                    h="8.34px"
+                    marginTop="-1rem"
+                    position="relative"
+                    mb="3rem"
+                    bgColor="#E5195E"
                   >
-                    
                     <Box
-                      bottom="5rem"
+                      top="-2.8px"
+                      right="7px"
                       as="button"
                       borderRadius="50%"
-                      w="8.34px"
-                      h="8.34px"
+                      w="22.94px"
+                      h="22.94px"
+                      px="0"
                       marginTop="-1rem"
                       position="relative"
-                      mb="3rem"
-                      bgColor="#E5195E"
+                      bgColor="#E5195E42"
+                    />
+
+                    <Box
+                      display="flex"
+                      w="220.85px"
+                      h="104.29px"
+                      flexDirection="row"
+                      position="relative"
+                      alignItems="center"
+                      justifyContent="center"
                     >
                       <Box
-                        top="-2.8px"
-                        right="7px"
-                        as="button"
-                        borderRadius="50%"
-                        w="22.94px"
-                        h="22.94px"
-                        px="0"
-                        marginTop="-1rem"
-                        position="relative"
-                        bgColor="#E5195E42"
-                      />
-
-                      <Box
                         display="flex"
-                        w="220.85px"
-                        h="104.29px"
-                        flexDirection="row"
-                        position="relative"
+                        flexDirection="column"
                         alignItems="center"
-                        justifyContent="center"
+                        mr="8rem"
                       >
-                        <Box
-                          display="flex"
-                          flexDirection="column"
-                          alignItems="center"
-                          mr="8rem"
-                        >
-                          <Text fontSize="sm" color="white">
-                            {item.date}
-                          </Text>
-                          <Text fontSize="xs" color="white">
-                            {item.phase}
-                          </Text>
-                        </Box>
+                        <Text fontSize="sm" color="white">
+                          {item.date}
+                        </Text>
+                        <Text fontSize="xs" color="white">
+                          {item.phase}
+                        </Text>
                       </Box>
                     </Box>
-                  </Tooltip>
-                </Flex>
-              ))}
-            </Flex>
-          </Box>
-        </Box>
+                  </Box>
+                </Tooltip>
+              </Flex>
+            ))}
+          </Flex>
+        </Box> */}
       </Box>
-    </div>
+    </Container>
   );
 };
 

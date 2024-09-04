@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 import FooterCom from "../components/FooterCom";
 import { useBreakpointValue } from "@chakra-ui/react";
 import HeroMobile from "../components/ui/Mobile/HeroMobile";
-import TimeLinesMobile from "../components/ui/Mobile/TimrLinesMobile";
+// import TimeLinesMobile from "../components/ui/Mobile/TimrLinesMobile";
 import ServiceMobile from "../components/ui/Mobile/ServiceMobile"
 
 const Home = () => {

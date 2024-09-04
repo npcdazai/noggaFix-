@@ -1,19 +1,17 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Container, Image, Text } from "@chakra-ui/react";
 import banner from "../assets/handvector.png";
 import text from "../assets/text.png";
 import Button from "../components/ui/Button"
 const Banner = () => {
   return (
-    <div>
-      <Box>
-        <Box
+        <Container
           backgroundImage={`url(${banner})`}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
-          w="100%"
+          maxW="container.2xl"
           h="100%"
-          p={8}
+          p={12}
         >
           <Box w="50%" display="flex" flexDirection="column" gap={4}>
             <Image src={text} h="104px" w="598px" />
@@ -40,9 +38,7 @@ const Banner = () => {
             </Text>
             <Button Context="Let's Connect"/>
           </Box>
-        </Box>
-      </Box>
-    </div>
+        </Container>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import img from "../assets/banner.png";
 import uparrow from "../assets/uparrow.png";
@@ -11,7 +11,8 @@ const servicesData = [
   {
     id: 1,
     title: "Mobile App Development",
-    description: "Transforming concepts into captivating mobile experiences with our expert app development services.",
+    description:
+      "Transforming concepts into captivating mobile experiences with our expert app development services.",
     image: img,
     buttonText: "Let’s build an App",
     buttonLink: "/mobile-app",
@@ -19,34 +20,39 @@ const servicesData = [
   {
     id: 2,
     title: "Hybrid App Development",
-    description: "Building versatile apps that work across platforms to ensure a seamless user experience.",
+    description:
+      "Building versatile apps that work across platforms to ensure a seamless user experience.",
     image: service,
   },
   {
     id: 3,
     title: "iOS App Development",
-    description: "Creating high-quality iOS applications tailored to your needs.",
+    description:
+      "Creating high-quality iOS applications tailored to your needs.",
     image: service,
   },
   {
     id: 4,
     title: "Android App Development",
-    description: "Developing responsive Android applications to reach a wider audience.",
+    description:
+      "Developing responsive Android applications to reach a wider audience.",
     image: service,
   },
   {
     id: 5,
     title: "AI/ML Applications",
-    description: "Leveraging AI and ML to build intelligent and predictive mobile applications.",
+    description:
+      "Leveraging AI and ML to build intelligent and predictive mobile applications.",
     image: service,
   },
 ];
 
 const ServiceSection = () => {
   return (
-    <Box
+    <Container
+      maxW="container.2xl"
       bgColor="black"
-      p={"4rem"}
+      p={"3rem"}
       display="flex"
       alignItems="center"
       gap={5}
@@ -117,7 +123,12 @@ const ServiceSection = () => {
           </Box>
         </Box>
       </Box>
-      <Box display="flex" justifyContent="space-between" alignItems="center" gap={4}>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        gap={4}
+      >
         {servicesData.slice(2).map((service) => (
           <Box
             key={service.id}
@@ -143,15 +154,28 @@ const ServiceSection = () => {
               gap={3}
               {...commonStyles}
             >
-              <Heading w="216px" color="#fff" fontWeight={600} fontSize="25px" lineHeight="30px">
+              <Heading
+                w="216px"
+                color="#fff"
+                fontWeight={600}
+                fontSize="25px"
+                lineHeight="30px"
+              >
                 {service.title}
               </Heading>
-              <Text fontSize="18px" fontWeight={400} lineHeight="22.87px" color="#C4C4C4">{service.description}</Text>
+              <Text
+                fontSize="18px"
+                fontWeight={400}
+                lineHeight="22.87px"
+                color="#C4C4C4"
+              >
+                {service.description}
+              </Text>
             </Box>
           </Box>
         ))}
       </Box>
-    </Box>
+    </Container>
   );
 };
 

@@ -7,6 +7,7 @@ import {
   UnorderedList,
   ListItem,
   Input,
+  Container,
 } from "@chakra-ui/react";
 import React from "react";
 import pdf from "../assets/pdf.png";
@@ -60,9 +61,10 @@ const footerData = [
 
 const FooterCom = () => {
   return (
-    <Box
+    <Container
+    maxW="contianer.2xl"
       bgColor="#1A1A1A"
-      p="4rem"
+      p="3rem"
       display="flex"
       justifyContent="space-between"
       w="100%"
@@ -204,7 +206,7 @@ const FooterCom = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </Container>
   );
 };
 

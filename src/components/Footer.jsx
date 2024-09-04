@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 const data = [
   {
@@ -33,8 +33,7 @@ const data = [
 
 const Footer = () => {
   return (
-    <div>
-      <Box p={"4rem"} bgColor="#242424" display="flex" flexDirection="row" gap={7}>
+      <Container maxW="contianer.2xl" p={"3rem"} bgColor="#242424" display="flex" flexDirection="row" gap={7}>
         {data.map((val) => {
           return (
             <Box
@@ -60,8 +59,7 @@ const Footer = () => {
             </Box>
           );
         })}
-      </Box>
-    </div>
+      </Container>
   );
 };
 

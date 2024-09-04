@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
 // import React from "react";
 import img from "../../../assets/banner.png";
 import service from "../../../assets/service.png";
@@ -48,13 +48,14 @@ const servicesData = [
 
 const ServiceSection = () => {
   return (
-    <Box
+    <Container
       bgColor="black"
       p={["2rem", "4rem"]}
       display="flex"
       alignItems="center"
       gap={[3, 5]}
       flexDirection="column"
+      maxW="container.2xl"
     >
       <Heading
         fontSize={["20px", "30px"]}
@@ -202,7 +203,7 @@ const ServiceSection = () => {
         </Box>
       ))}
       {/* </Box> */}
-    </Box>
+    </Container>
   );
 };
 

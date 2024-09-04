@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Flex, Text, Image, Heading, HStack } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Heading, HStack, Container } from "@chakra-ui/react";
 import simpletend from "../assets/simpletend.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import upperQuotes from "../assets/upperquotes.png";
@@ -72,7 +72,7 @@ const Carousel = () => {
   }, []); // Empty dependency array ensures effect runs once on mount
 
   return (
-      <Box bgColor="black">
+      <Container bgColor="black" maxW="container.2xl" overflow="hidden">
         <Heading fontWeight={600} fontSize="40px" textAlign="center" color="#ffff">Testimonial</Heading>
         <Flex
           w="full"
@@ -81,7 +81,7 @@ const Carousel = () => {
             bg: "#3e3e3e",
           }}
           py={"6rem"}
-          px={"3rem"}
+          // px={"3rem"}
           alignItems="center"
           justifyContent="center"
         >
@@ -180,7 +180,7 @@ const Carousel = () => {
 
           </Flex>
         </Flex>
-      </Box>
+      </Container>
   );
 };
 

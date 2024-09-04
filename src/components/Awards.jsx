@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import health from "../assets/health.png";
 import clucth from "../assets/clutch.png";
@@ -33,14 +33,14 @@ const awardsData = [
 
 const Awards = () => {
   return (
-    <Box
+    <Container
       bgColor="#050505"
-      p="4rem"
+      p="2rem"
       display="flex"
       flexDirection="column"
       alignItems="center"
       gap={8}
-      w="100%"
+      maxW="container.2xl"
     >
       <Heading
         color="#FBFBFB"
@@ -95,7 +95,7 @@ const Awards = () => {
           </Box>
         ))}
       </Box>
-    </Box>
+    </Container>
   );
 };
 

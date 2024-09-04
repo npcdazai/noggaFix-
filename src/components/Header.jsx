@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Image, Text, keyframes } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Image,
+  Text,
+  keyframes,
+} from "@chakra-ui/react";
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -36,12 +44,15 @@ const Header = () => {
   });
 
   return (
-    <div style={{ position: "sticky", top: 0, zIndex: 100, width: "100vw" }}>
-      <Box w="100%">
+    <Container
+      bgColor="black"
+      borderBottom="1px solid #5C5C5C"
+      style={{ position: "sticky", top: 0, zIndex: 100 }}
+      maxW="container.2xl"
+    >
+      <Box>
         <Flex
-          bgColor="black"
-          borderBottom="1px solid #5C5C5C"
-          px={{ base: "0px", md: "1.5rem", lg: "2.5rem" }}
+          // px={{ base: "0px", md: "1.5rem", lg: "1.8rem" }}
           py={{ base: 1, md: 1.3, lg: 2 }}
           justifyContent="space-between"
           alignItems="center"
@@ -57,7 +68,7 @@ const Header = () => {
             w={"100%"}
             h={{ base: "30px", md: "50px", lg: "66px" }}
             textAlign="center"
-            ml={{base :2, md : 3, lg:4}}
+            ml={{ base: 2, md: 3, lg: 4 }}
           >
             <Text
               textColor="#e8155d"
@@ -82,14 +93,14 @@ const Header = () => {
               borderRadius="0px"
               textColor="white"
               className="pinkcolor"
-              fontSize={{base:"sm", md:"md",lg:"lg"}}
+              fontSize={{ base: "sm", md: "md", lg: "lg" }}
             >
               Contact Us
             </Button>
           </NavLink>
         </Flex>
       </Box>
-    </div>
+    </Container>
   );
 };
 

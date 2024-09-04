@@ -66,15 +66,13 @@ const Form = () => {
   };
 
   return (
-    <Container p={{ base: "1rem", lg: "3rem" }} bg="black" maxW="container.xxl">
+    <Container maxW='container.2xl' p={{ base: "1rem", lg: "3rem" }} bg="black">
       <Box
         bg="#0F0F0F"
         display="flex"
         flexDirection="column"
         alignItems="center"
-        w="100%"
-        // px={{ base: "2rem", md: "4rem" }}
-        py="2rem"
+        // w="100%"
       >
         <Heading
           fontWeight="600"
@@ -88,12 +86,11 @@ const Form = () => {
         >
           Let’s Collaborate to Shape Your Vision into Reality
         </Heading>
-        {/* <Box display="flex" flexDirection="column" alignItems="center"> */}
+        <Box display="flex" flexDirection="column" alignItems="center" w={'100%'}>
           {/* <form> */}
             <FormControl display="flex" flexDirection="column" alignItems="center" gap={4} w="100%">
               <Box
                px={"4rem"}
-              // backgroundColor="red"
                 display="grid"
                 gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
                 gap={4}
@@ -386,7 +383,7 @@ const Form = () => {
               </Box>
             </FormControl>
           {/* </form> */}
-        {/* </Box> */}
+        </Box>
       </Box>
     </Container>
   );

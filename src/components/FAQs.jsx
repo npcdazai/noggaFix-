@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Container,
   Heading,
 } from "@chakra-ui/react";
 import React from "react";
@@ -29,8 +30,7 @@ const FAQData = [
 
 const FAQs = () => {
   return (
-    <div>
-      <Box bgColor="black" p="4rem" >
+      <Container maxW="container.2xl" bgColor="black" p="2.8rem" >
         <Heading color="#FBFBFB" fontWeight={600} textAlign="center">
           FAQ’s
         </Heading>
@@ -57,8 +57,7 @@ const FAQs = () => {
             ))}
           </Accordion>
         </Box>
-      </Box>
-    </div>
+      </Container>
   );
 };
 
