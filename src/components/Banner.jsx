@@ -14,7 +14,7 @@ const Banner = () => {
           p={12}
         >
           <Box w="50%" display="flex" flexDirection="column" gap={4}>
-            <Image src={text} h="104px" w="598px" />
+            <Image src={text}  w="598px" />
             <Text
               fontSize="20px"
               fontWeight={400}
