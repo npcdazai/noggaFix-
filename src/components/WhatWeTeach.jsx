@@ -17,7 +17,6 @@ const WhatWeTeach = () => {
         What tech we use
       </Heading>
       <CompactTable />
-   
     </Container>
   );
 };

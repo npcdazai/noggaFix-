@@ -17,7 +17,7 @@ const Hero = () => {
           justifyContent="space-between"
           spacing={4}
           alignItems="center"
-          px={"4.4rem"}
+          px={"3rem"}
           py={"5rem"}
         >
           <HStack wrap="wrap" w={"60%"} gap={"2rem"}>

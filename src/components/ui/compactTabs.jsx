@@ -1,7 +1,7 @@
-import { Container, Flex,  Box, Text } from "@chakra-ui/react";
+import { Container, Flex, Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import Hybrid from "../OS/Hybrid";
-const HybridComponent = () => <Hybrid/>;
+const HybridComponent = () => <Hybrid />;
 const IOSComponent = () => <div>IOS Content</div>;
 const AndriodComponent = () => <div>Sync Content</div>;
 const AIMLComponent = () => <div>Prosperity Content</div>;
@@ -27,8 +27,8 @@ const TabsComponent = () => {
   const ActiveTabComponent = activeTab.component;
 
   return (
-    <Container>
-      <Flex  p={1} justifyContent="center" w="100%">
+    <Box display="flex" alignItems="center" flexDirection="column" w="100%">
+      <Flex w="50%"  px={"6rem"} py={"3px"} alignItems="center">
         {tabs.map((tab) => (
           <Flex
             key={tab.id}
@@ -36,7 +36,6 @@ const TabsComponent = () => {
             alignItems="center"
             justifyContent="center"
             color={activeTab.id === tab.id ? "white" : "gray.400"}
-            px={{ base: "2rem", md: "4rem" }}
             py={2}
             cursor="pointer"
             borderBottom={
@@ -45,7 +44,7 @@ const TabsComponent = () => {
             onClick={() => handleTabClick(tab)}
             transition="color 0.3s, border-bottom 0.3s"
             _hover={{ color: "white" }}
-            w="20%"
+            w="50%"
           >
             {/* <Image
               h="24px"
@@ -54,18 +53,17 @@ const TabsComponent = () => {
               filter={activeTab.id === tab.id ? "none" : "grayscale(100%)"}
               transition="filter 0.3s"
             /> */}
-            <Text mt={2} fontSize="sm" fontWeight="bold">
+            <Text mt={2} fontSize="20px" fontWeight="bold">
               {tab.label}
             </Text>
           </Flex>
         ))}
       </Flex>
-        <Box borderBottom="1px solid #E0E0E0" w={"100%"} />
-      <Box maxW="container.md" mt="2rem">
+      <Box borderBottom="1px solid #E0E0E0" w={"100%"} />
+      <Box maxW="container.2xl">
         <ActiveTabComponent />
       </Box>
-      
-    </Container>
+    </Box>
   );
 };
 
