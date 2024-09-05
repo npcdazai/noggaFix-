@@ -40,10 +40,9 @@ const Carousel = () => {
     transition: "0.6s ease",
     borderRadius: "0 3px 3px 0",
     userSelect: "none",
-    // _hover: {
-    //   opacity: 0.8,
-    //   bg: "black",
-    // },
+    _hover: {
+      opacity: 0.8,
+    },
   };
 
   const [currentSlide, setCurrentSlide] = useState(0);

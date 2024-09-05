@@ -32,7 +32,7 @@ function App() {
   const getBoxHeight = (box) => (selectedBox === box ? "452px" : "412px");
 
   return (
-      <Box position="relative" h="100%" p="3rem" overflowX="hidden" width={["25%", "50%", "100%"]}>
+      <Box position="relative" h="100%" p="3rem" overflowX="hidden" width={"100%"}>
         <AnimatePresence>
           {selectedBox && (
             <motion.div

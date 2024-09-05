@@ -6,9 +6,10 @@ import codeIgniter from "../../assets/codeigniter.png";
 import java from "../../assets/java.png";
 import angular from "../../assets/anugular.png";
 import vue from "../../assets/vue.png";
-import lavarel from "../../assets/lavarel.png"
-import nodejs from "../../assets/nodejs.png"
-import tsx from "../../assets/typescript.png"
+import lavarel from "../../assets/lavarel.png";
+import nodejs from "../../assets/nodejs.png";
+import tsx from "../../assets/typescript.png";
+
 const techStack = [
   { name: "HTML", image: htmlpng },
   { name: "React", image: reactjs },
@@ -17,7 +18,6 @@ const techStack = [
   { name: "Angular", image: angular },
   { name: "Vue", image: vue },
 ];
-
 
 const backEnd = [
   { name: "lavarel", image: lavarel },
@@ -37,28 +37,37 @@ const Hybrid = () => {
       flexDirection="column"
       bgColor="black"
       gap={3}
+      px={{ base: "1rem", md: "2rem" }} 
     >
       <Heading color="#ACACAC" fontWeight={500} fontSize="18px" mt="1rem">
         Front-End
       </Heading>
-      <Box display="flex" alignItems="center" flexDirection="column">
+      <Box
+        display="flex"
+        alignItems="center"
+        flexDirection="column"
+        maxHeight="300px"
+        overflowY="scroll" 
+        w="100%"
+      >
         <Box
-          display={"flex"}
-          flexDirection="row"
+          display="flex"
+          flexDirection={{ base: "column", md: "column" }}
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="center"
           gap={4}
           py="2rem"
+          flexWrap="wrap"
         >
           {techStack.slice(0, 3).map((tech) => (
             <Box
               key={tech.name}
-              w="288px"
-              h={"99px"}
-              p={"1.4rem"}
-              display={"flex"}
+              w={{ base: "100%", sm: "288px" }}
+              h="99px"
+              p="1.4rem"
+              display="flex"
               bgColor="#0F0F0F"
-              flexDirection="row"
+              flexDirection="column"
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
@@ -71,22 +80,24 @@ const Hybrid = () => {
             </Box>
           ))}
         </Box>
+
         <Box
-          display={"flex"}
-          flexDirection="row"
+          display="flex"
+          flexDirection={{ base: "column", md: "column" }}
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="center"
           gap={4}
+          flexWrap="wrap"
         >
           {techStack.slice(3).map((tech) => (
             <Box
               key={tech.name}
-              w="288px"
-              h={"99px"}
-              p={"1.4rem"}
-              display={"flex"}
+              w={{ base: "100%", sm: "288px" }}
+              h="99px"
+              p="1.4rem"
+              display="flex"
               bgColor="#0F0F0F"
-              flexDirection="row"
+              flexDirection="column"
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
@@ -101,27 +112,36 @@ const Hybrid = () => {
         </Box>
       </Box>
 
+      {/* Back-End Section */}
       <Heading color="#ACACAC" fontWeight={500} fontSize="18px" mt="1rem">
         Back-End
       </Heading>
-      <Box display="flex" alignItems="center" flexDirection="column">
+      <Box
+        display="flex"
+        alignItems="center"
+        flexDirection="column"
+        maxHeight="300px" 
+        overflowY="auto"  
+        w="100%"
+      >
         <Box
-          display={"flex"}
-          flexDirection="row"
+          display="flex"
+          flexDirection={{ base: "column", md: "column" }}
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="center"
           gap={4}
           py="2rem"
+          flexWrap="wrap"
         >
           {backEnd.slice(0, 3).map((tech) => (
             <Box
               key={tech.name}
-              w="288px"
-              h={"99px"}
-              p={"1.4rem"}
-              display={"flex"}
+              w={{ base: "100%", sm: "288px" }}
+              h="99px"
+              p="1.4rem"
+              display="flex"
               bgColor="#0F0F0F"
-              flexDirection="row"
+              flexDirection="column"
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
@@ -134,22 +154,24 @@ const Hybrid = () => {
             </Box>
           ))}
         </Box>
+
         <Box
-          display={"flex"}
-          flexDirection="row"
+          display="flex"
+          flexDirection={{ base: "column", md: "column" }}
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="center"
           gap={4}
+          flexWrap="wrap"
         >
           {backEnd.slice(3).map((tech) => (
             <Box
               key={tech.name}
-              w="288px"
-              h={"99px"}
-              p={"1.4rem"}
-              display={"flex"}
+              w={{ base: "100%", sm: "288px" }}
+              h="99px"
+              p="1.4rem"
+              display="flex"
               bgColor="#0F0F0F"
-              flexDirection="row"
+              flexDirection="column"
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
