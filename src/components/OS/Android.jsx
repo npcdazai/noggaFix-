@@ -1,30 +1,19 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import htmlpng from "../../assets/html.png";
-import reactjs from "../../assets/react.png";
-import codeIgniter from "../../assets/codeigniter.png";
+import fluter from "../../assets/fluter.png";
+import ios from "../../assets/ios.png";
+import swift from "../../assets/swifty.png";
+import reactNative from "../../assets/reactNative.png";
+import kotlin from "../../assets/kotlin.png";
+import nodejs from "../../assets/nodejs.png";
 import java from "../../assets/java.png";
-import angular from "../../assets/anugular.png";
-import vue from "../../assets/vue.png";
-import lavarel from "../../assets/lavarel.png"
-import nodejs from "../../assets/nodejs.png"
+import python from "../../assets/phython.png";
 const techStack = [
-  { name: "HTML", image: htmlpng },
-  { name: "React", image: reactjs },
-  { name: "Code Igniter", image: codeIgniter },
-  { name: "Java", image: java },
-  { name: "Angular", image: angular },
-  { name: "Vue", image: vue },
+  { name: "Kotlin", image: kotlin },
+  { name: "React Native", image: reactNative },
 ];
-
-
-const backEnd = [
-  { name: "lavarel", image: lavarel },
-  { name: "node", image: nodejs },
-  { name: "Code Igniter", image: codeIgniter },
-  { name: "Java", image: java },
-  { name: "Angular", image: angular },
-  { name: "Vue", image: vue },
+const backend = [
+  { name: "java", image: java },
 ];
 
 const Hybrid = () => {
@@ -49,7 +38,7 @@ const Hybrid = () => {
           gap={4}
           py="2rem"
         >
-          {techStack.slice(0, 3).map((tech) => (
+          {techStack.slice(0, 2).map((tech) => (
             <Box
               key={tech.name}
               w="288px"
@@ -63,7 +52,7 @@ const Hybrid = () => {
               filter="grayscale(100%)"
               _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
             >
-              <Image src={tech.image} w="45.31px" h="50px" />
+              <Image src={tech.image} h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
                 {tech.name}
               </Text>
@@ -77,7 +66,7 @@ const Hybrid = () => {
           justifyContent="space-between"
           gap={4}
         >
-          {techStack.slice(3).map((tech) => (
+          {techStack.slice(2).map((tech) => (
             <Box
               key={tech.name}
               w="288px"
@@ -91,7 +80,7 @@ const Hybrid = () => {
               filter="grayscale(100%)"
               _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
             >
-              <Image src={tech.image} w="45.31px" h="50px" />
+              <Image src={tech.image} h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
                 {tech.name}
               </Text>
@@ -112,7 +101,7 @@ const Hybrid = () => {
           gap={4}
           py="2rem"
         >
-          {backEnd.slice(0, 3).map((tech) => (
+          {backend.slice(0, 2).map((tech) => (
             <Box
               key={tech.name}
               w="288px"
@@ -140,7 +129,7 @@ const Hybrid = () => {
           justifyContent="space-between"
           gap={4}
         >
-          {backEnd.slice(3).map((tech) => (
+          {techStack.slice(2).map((tech) => (
             <Box
               key={tech.name}
               w="288px"

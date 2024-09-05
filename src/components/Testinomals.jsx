@@ -17,7 +17,6 @@ import wokacircle from "../assets/wokacircle.png"
 import gsfcircle from "../assets/gsfcircle.png"
 import prosperity from "../assets/properity.png"
 
-
 const testimonials = [
   {
     quote:

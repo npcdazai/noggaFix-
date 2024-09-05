@@ -1,10 +1,13 @@
 import { Container, Flex, Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import Hybrid from "../OS/Hybrid";
+import Ios from "../OS/IOS"
+import Android from "../OS/Android"
+import AiMl from "../OS/AIML"
 const HybridComponent = () => <Hybrid />;
-const IOSComponent = () => <div>IOS Content</div>;
-const AndriodComponent = () => <div>Sync Content</div>;
-const AIMLComponent = () => <div>Prosperity Content</div>;
+const IOSComponent = () => <Ios/>;
+const AndriodComponent = () => <Android/>;
+const AIMLComponent = () => <AiMl/>;
 
 const TabsComponent = () => {
   const [activeTab, setActiveTab] = useState({
@@ -15,7 +18,7 @@ const TabsComponent = () => {
 
   const tabs = [
     { id: "tab1", label: "Hybrid", component: HybridComponent },
-    { id: "tab2", label: "iOS", component: IOSComponent },
+    { id: "tab2", label: "IOS", component: IOSComponent },
     { id: "tab3", label: "Android", component: AndriodComponent },
     { id: "tab4", label: "AI/ML", component: AIMLComponent },
   ];
