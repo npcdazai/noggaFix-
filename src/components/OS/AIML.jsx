@@ -3,8 +3,8 @@ import React from "react";
 import aiml from "../../assets/aiml.png";
 import tensorflow from "../../assets/tensorflow.png";
 import scikit from "../../assets/scikit.png";
-import reactNative from "../../assets/reactNative.png";
-import kotlin from "../../assets/kotlin.png";
+import tableau from "../../assets/tableau.png";
+import machineLearning from "../../assets/machineLearning.png";
 import nodejs from "../../assets/nodejs.png";
 import java from "../../assets/java.png";
 import python from "../../assets/phython.png";
@@ -12,6 +12,8 @@ const techStack = [
   { name: "AI/ML", image: aiml },
   { name: "Tensorflow", image: tensorflow },
   { name: "Scikit", image: scikit },
+  { name: "Tableau", image: tableau },
+  { name: "Machine Learning", image: machineLearning },
 ];
 const backend = [
   { name: "java", image: java },
