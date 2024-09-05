@@ -1,6 +1,6 @@
 import { Container, Flex, Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import Hybrid from "../../OS/Hybrid";
+import Hybrid from "../../OS/HybridMobile";
 
 const HybridComponent = () => <Hybrid />;
 const IOSComponent = () => <div>IOS Content</div>;

@@ -13,7 +13,7 @@ import tsx from "../../assets/typescript.png";
 const techStack = [
   { name: "HTML", image: htmlpng },
   { name: "React", image: reactjs },
-  { name: "Code Igniter", image: codeIgniter },
+  { name: "CodeIgniter", image: codeIgniter },
   { name: "Java", image: java },
   { name: "Angular", image: angular },
   { name: "Vue", image: vue },
@@ -38,150 +38,133 @@ const Hybrid = () => {
       bgColor="black"
       gap={3}
       px={{ base: "1rem", md: "2rem" }} 
-    >
+          >
       <Heading color="#ACACAC" fontWeight={500} fontSize="18px" mt="1rem">
         Front-End
       </Heading>
-      <Box
-        display="flex"
-        alignItems="center"
-        flexDirection="column"
-        maxHeight="300px"
-        overflowY="scroll" 
-        w="100%"
-      >
+      <Box display="flex" alignItems="center" flexDirection="column">
         <Box
           display="flex"
-          flexDirection={{ base: "column", md: "column" }}
+          flexDirection={{ base: "row", md: "row" }} // Stack items on mobile
           alignItems="center"
           justifyContent="center"
           gap={4}
           py="2rem"
-          flexWrap="wrap"
+          flexWrap="wrap" // Ensure wrapping on smaller screens
         >
-          {techStack.slice(0, 3).map((tech) => (
+          {techStack.slice(0, 2).map((tech) => (
             <Box
               key={tech.name}
-              w={{ base: "100%", sm: "288px" }}
+              w={{ base: "110px", sm: "288px" }}
               h="99px"
-              p="1.4rem"
+              p="1rem"
               display="flex"
               bgColor="#0F0F0F"
-              flexDirection="column"
+              flexDirection="row"
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
               _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
             >
-              <Image src={tech.image} w="45.31px" h="50px" />
-              <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
+              <Image src={tech.image} h="30px" />
+              <Text fontSize="14px" fontWeight={400} color="#FFFFFF">
                 {tech.name}
               </Text>
             </Box>
           ))}
         </Box>
-
         <Box
           display="flex"
-          flexDirection={{ base: "column", md: "column" }}
+          flexDirection={{ base: "row", md: "row" }}
           alignItems="center"
           justifyContent="center"
           gap={4}
           flexWrap="wrap"
         >
-          {techStack.slice(3).map((tech) => (
+          {techStack.slice(2).map((tech) => (
             <Box
-              key={tech.name}
-              w={{ base: "100%", sm: "288px" }}
-              h="99px"
-              p="1.4rem"
-              display="flex"
-              bgColor="#0F0F0F"
-              flexDirection="column"
-              justifyContent="space-between"
-              alignItems="center"
-              filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
-            >
-              <Image src={tech.image} w="45.31px" h="50px" />
-              <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
-                {tech.name}
-              </Text>
-            </Box>
+            key={tech.name}
+            w={{ base: "110px", sm: "288px" }}
+            h="99px"
+            p="10px"
+            display="flex"
+            bgColor="#0F0F0F"
+            flexDirection="row"
+            justifyContent="space-between"
+            alignItems="center"
+            filter="grayscale(100%)"
+            _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+          >
+            <Image src={tech.image} h="30px" />
+            <Text fontSize="14px" fontWeight={400} color="#FFFFFF">
+              {tech.name}
+            </Text>
+          </Box>
           ))}
         </Box>
       </Box>
 
-      {/* Back-End Section */}
       <Heading color="#ACACAC" fontWeight={500} fontSize="18px" mt="1rem">
         Back-End
       </Heading>
-      <Box
-        display="flex"
-        alignItems="center"
-        flexDirection="column"
-        maxHeight="300px" 
-        overflowY="auto"  
-        w="100%"
-      >
+      <Box display="flex" alignItems="center" flexDirection="column">
         <Box
           display="flex"
-          flexDirection={{ base: "column", md: "column" }}
+          flexDirection={{ base: "row", md: "row" }}
           alignItems="center"
           justifyContent="center"
           gap={4}
           py="2rem"
           flexWrap="wrap"
         >
-          {backEnd.slice(0, 3).map((tech) => (
-            <Box
-              key={tech.name}
-              w={{ base: "100%", sm: "288px" }}
-              h="99px"
-              p="1.4rem"
-              display="flex"
-              bgColor="#0F0F0F"
-              flexDirection="column"
-              justifyContent="space-between"
-              alignItems="center"
-              filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
-            >
-              <Image src={tech.image} w="45.31px" h="50px" />
-              <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
-                {tech.name}
-              </Text>
-            </Box>
+          {backEnd.slice(0, 2).map((tech) => (
+             <Box
+             key={tech.name}
+             w={{ base: "110px", sm: "288px" }}
+             h="99px"
+             p="1rem"
+             display="flex"
+             bgColor="#0F0F0F"
+             flexDirection="row"
+             justifyContent="space-between"
+             alignItems="center"
+             filter="grayscale(100%)"
+             _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+           >
+             <Image src={tech.image} h="30px" />
+             <Text fontSize="14px" fontWeight={400} color="#FFFFFF">
+               {tech.name}
+             </Text>
+           </Box>
           ))}
         </Box>
-
         <Box
           display="flex"
-          flexDirection={{ base: "column", md: "column" }}
+          flexDirection={{ base: "row", md: "row" }}
           alignItems="center"
           justifyContent="center"
           gap={4}
           flexWrap="wrap"
         >
-          {backEnd.slice(3).map((tech) => (
+          {backEnd.slice(2).map((tech) => (
             <Box
-              key={tech.name}
-              w={{ base: "100%", sm: "288px" }}
-              h="99px"
-              p="1.4rem"
-              display="flex"
-              bgColor="#0F0F0F"
-              flexDirection="column"
-              justifyContent="space-between"
-              alignItems="center"
-              filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
-            >
-              <Image src={tech.image} w="45.31px" h="50px" />
-              <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
-                {tech.name}
-              </Text>
-            </Box>
+            key={tech.name}
+            w={{ base: "110px", sm: "288px" }}
+            h="99px"
+            p="1rem"
+            display="flex"
+            bgColor="#0F0F0F"
+            flexDirection="row"
+            justifyContent="space-between"
+            alignItems="center"
+            filter="grayscale(100%)"
+            _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+          >
+            <Image src={tech.image} h="30px" />
+            <Text fontSize="14px" fontWeight={400} color="#FFFFFF">
+              {tech.name}
+            </Text>
+          </Box>
           ))}
         </Box>
       </Box>
