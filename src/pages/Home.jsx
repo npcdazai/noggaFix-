@@ -17,6 +17,13 @@ import HeroMobile from "../components/ui/Mobile/HeroMobile";
 import ServiceMobile from "../components/ui/Mobile/ServiceMobile";
 import PortFolioMobile from "../components/ui/Mobile/ProftFolioMobile";
 import TechMobile from "../components/ui/Mobile/Tech";
+import TestiMobile from "../components/ui/Mobile/TestinomalMobile";
+import BannerMobile from "../components/ui/Mobile/BannerMobile";
+import FormMobile from "../components/ui/Mobile/FormMobile";
+import FAQMobile from "../components/ui/Mobile/FQAMobile";
+import FooterMobile from "../components/ui/Mobile/FooterMobile";
+import FooterComMobile from "../components/ui/Mobile/FooterComMobile"
+
 const Home = () => {
   const heroComponent = useBreakpointValue({
     base: <HeroMobile />,
@@ -38,6 +45,36 @@ const Home = () => {
     lg: <Teach />,
   });
 
+  const testinomal = useBreakpointValue({
+    base: <TestiMobile />,
+    lg: <Testi />,
+  });
+
+  const banner = useBreakpointValue({
+    base: <BannerMobile />,
+    lg: <Banner />,
+  });
+
+  const form = useBreakpointValue({
+    base: <FormMobile />,
+    lg: <Form />,
+  });
+
+  const faq = useBreakpointValue({
+    base: <FAQMobile />,
+    lg: <FAQs />,
+  });
+
+  const footer = useBreakpointValue({
+    base: <FooterMobile />,
+    lg: <Footer />,
+  });
+
+  const footercom = useBreakpointValue({
+    base: <FooterComMobile />,
+    lg: <FooterCom />,
+  })
+
   return (
     <>
       {heroComponent}
@@ -47,13 +84,19 @@ const Home = () => {
       {PortFolio}
       {/* <Teach /> */}
       {Tech}
-      <Testi />
-      <Awards />
-      <Banner />
-      <Form />
-      <FAQs />
-      <Footer />
-      <FooterCom />
+      {/* <Testi /> */}
+      {testinomal}
+      {/* <Awards /> */}
+      {/* <Banner /> */}
+      {banner}
+      {/* <Form /> */}
+      {form}
+      {/* <FAQs/> */}
+      {faq}
+      {footer}
+      {footercom}
+      {/* <Footer /> */}
+      {/* <FooterCom /> */}
     </>
   );
 };
