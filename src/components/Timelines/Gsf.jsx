@@ -6,7 +6,11 @@ const data = [
   { id: 2, phase: "App Development", date: "August 2023 - September 2023" },
   { id: 5, phase: "Support and Maintenance", date: "December 2023 - Ongoing" },
   { id: 4, phase: "Product Design", date: "July 2023 - July 2023" },
-  { id: 3, phase: "Testing and Deployment", date: "October 2023 - November 2023" },
+  {
+    id: 3,
+    phase: "Testing and Deployment",
+    date: "October 2023 - November 2023",
+  },
 ];
 
 const Timeline = () => {
@@ -27,7 +31,7 @@ const Timeline = () => {
               }}
             >
               <Text fontSize="lg">{item.phase}</Text>
-              <Text  fontSize="17.83px" mt={2}>
+              <Text fontSize="17.83px" mt={2}>
                 {item.date}
               </Text>
             </Box>
@@ -36,7 +40,94 @@ const Timeline = () => {
       </Flex>
       <Box position="relative">
         <Image src={LineBar} h="100px" w="100%" />
-        <Box px="5rem" position="absolute" top="3rem">
+        <Box
+          px="5rem"
+          position="absolute"
+          top="3rem"
+          display={"flex"}
+          justifyContent="space-between"
+          w="100%"
+        >
+          <Box
+            as="button"
+            borderRadius="50%"
+            w="8.34px"
+            h="8.34px"
+            bgColor="#E5195E"
+          >
+            <Box
+              top="-2.8px"
+              right="7px"
+              as="button"
+              borderRadius="50%"
+              w="22.94px"
+              h="22.94px"
+              px="0"
+              marginTop="-1rem"
+              position="relative"
+              bgColor="#E5195E42"
+            />
+          </Box>
+          <Box
+            as="button"
+            borderRadius="50%"
+            w="8.34px"
+            h="8.34px"
+            bgColor="#E5195E"
+          >
+            <Box
+              top="-2.8px"
+              right="7px"
+              as="button"
+              borderRadius="50%"
+              w="22.94px"
+              h="22.94px"
+              px="0"
+              marginTop="-1rem"
+              position="relative"
+              bgColor="#E5195E42"
+            />
+          </Box>
+          <Box
+            as="button"
+            borderRadius="50%"
+            w="8.34px"
+            h="8.34px"
+            bgColor="#E5195E"
+          >
+            <Box
+              top="-2.8px"
+              right="7px"
+              as="button"
+              borderRadius="50%"
+              w="22.94px"
+              h="22.94px"
+              px="0"
+              marginTop="-1rem"
+              position="relative"
+              bgColor="#E5195E42"
+            />
+          </Box>
+          <Box
+            as="button"
+            borderRadius="50%"
+            w="8.34px"
+            h="8.34px"
+            bgColor="#E5195E"
+          >
+            <Box
+              top="-2.8px"
+              right="7px"
+              as="button"
+              borderRadius="50%"
+              w="22.94px"
+              h="22.94px"
+              px="0"
+              marginTop="-1rem"
+              position="relative"
+              bgColor="#E5195E42"
+            />
+          </Box>
           <Box
             as="button"
             borderRadius="50%"
@@ -59,7 +150,12 @@ const Timeline = () => {
           </Box>
         </Box>
       </Box>
-      <Flex px={"7rem"} position="relative" justify="space-between" align="center">
+      <Flex
+        px={"7rem"}
+        position="relative"
+        justify="space-between"
+        align="center"
+      >
         {data.slice(3, 5).map((item) => (
           <Box key={item.id} textAlign="center">
             <Box
