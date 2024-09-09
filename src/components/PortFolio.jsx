@@ -2,7 +2,7 @@ import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import qualityAssurance from "../assets/qualityAssurance.png";
 import costEffective from "../assets/costEffective.png";
-import time from "../assets/ontime.png";
+import time from "../assets/Ontime.png";
 import support from "../assets/support.png";
 import Company from "./Companys";
 

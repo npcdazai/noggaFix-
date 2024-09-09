@@ -17,7 +17,7 @@ import insta from "../../../assets/insta.png";
 import fb from "../../../assets/facebook.png";
 import logo from "../../../assets/wdilogo.png";
 import star from "../../../assets/5star.png";
-import CusButton from "../Button";
+// import CusButton from "../Button";
 const footerData = [
   {
     id: 1,
