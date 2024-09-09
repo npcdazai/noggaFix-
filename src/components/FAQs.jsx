@@ -86,25 +86,27 @@ const FAQs = () => {
       </Heading>
       <Box bgColor="black" py={8}>
         <Accordion
+        
           display="flex"
           flexDirection="column"
-          gap={3}
-          defaultIndex={[0]}
-          allowMultiple
+          gap={0}
+          allowToggle 
+          // defaultIndex={1}
           color="#ffff"
         >
           {FAQData.map((faq, index) => (
             <AccordionItem
+            py={3}
               key={index}
               borderTop="0px solid #E8155D"
               borderBottom="1px solid #E8155D"
             >
-                <AccordionButton>
-                  <Box as="span" flex="1" textAlign="left" fontSize="25px">
-                    {faq.question}
-                  </Box>
-                  {/* <AccordionIcon /> */}
-                </AccordionButton>
+              <AccordionButton>
+                <Box as="span" flex="1" textAlign="left" fontSize="25px">
+                  {faq.question}
+                </Box>
+                {/* <AccordionIcon /> */}
+              </AccordionButton>
               <AccordionPanel pb={4} color="#9F9F9F" fontSize="20px">
                 {faq.answer}
                 <Box display="flex" p={4} flexDirection="column">

@@ -376,7 +376,7 @@ const Form = () => {
                 </Text>
               )}
               <Box>
-                <Image src={captcha} w="147px" h="55px" borderRadius="1px" />
+                {/* <Image src={captcha} w="147px" h="55px" borderRadius="1px" /> */}
               </Box>
             </Box>
 

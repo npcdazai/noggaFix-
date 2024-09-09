@@ -76,7 +76,7 @@ function App() {
                   >
                     <Box w="400px">
                       <Image
-                        w="130.09px"
+                        // w="130.09px"
                         h="100.97px"
                         src={backgroundsTexts[selectedLogo]}
                       />

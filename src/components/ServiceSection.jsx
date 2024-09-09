@@ -80,7 +80,7 @@ const ServiceSection = () => {
               flexDirection="column"
               h="283px"
               p={8}
-              gap={4}
+              gap={2}
             >
               <Heading color="#fff" fontWeight={600}>
                 {service.title}
@@ -104,17 +104,17 @@ const ServiceSection = () => {
           justifyContent="space-between"
         >
           <Box p={8}>
-            <Image src={servicesData[1].image} w="48px" h={"37.41px"} />
+            <Image src={servicesData[1].image} w="48px" h={"37.41px"}/>
           </Box>
           <Box
-            w="100%"
-            display="flex"
-            flexDirection="column"
-            h="283px"
-            px={8}
-            gap={4}
-            {...commonStyles}
-            borderRadius="9px"
+              w="100%"
+              display="flex"
+              flexDirection="column"
+              h="283px"
+              px={8}
+              gap={4}
+              {...commonStyles}
+              borderRadius="9px"
           >
             <Heading color="#fff" fontWeight={600}>
               {servicesData[1].title}
@@ -134,8 +134,8 @@ const ServiceSection = () => {
             key={service.id}
             display="flex"
             bgColor="#0F0F0F"
-            w="33%"
-            h={"290px"}
+            w="40%"
+            h={"270px"}
             flexDirection="column"
             justifyContent="space-between"
             alignItems="flex-start"
@@ -149,9 +149,9 @@ const ServiceSection = () => {
               w="100%"
               display="flex"
               flexDirection="column"
-              h="283px"
+              h="100%"
               px={8}
-              gap={3}
+              gap={6}
               {...commonStyles}
             >
               <Heading
@@ -159,7 +159,7 @@ const ServiceSection = () => {
                 color="#fff"
                 fontWeight={600}
                 fontSize="25px"
-                lineHeight="30px"
+                lineHeight="25px"
               >
                 {service.title}
               </Heading>

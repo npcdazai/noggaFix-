@@ -100,7 +100,7 @@ const Carousel = () => {
   }, []); // Empty dependency array ensures effect runs once on mount
 
   return (
-    <Container bgColor="black" maxW="container.2xl" overflow="hidden"  p={4}>
+    <Container bgColor="black" maxW="container.2xl" overflow="hidden"  p={4} >
 
       <Heading
         fontWeight={600}
@@ -111,17 +111,16 @@ const Carousel = () => {
         Testimonial
       </Heading>
       <Flex
-        w="full"
+        w="100%"
         bg="black"
         _dark={{
           bg: "#3e3e3e",
         }}
         py={"6rem"}
-        // px={"3rem"}
         alignItems="center"
         justifyContent="center"
       >
-        <Flex w="full" pos="relative" p={4}>
+        <Flex w="100%" pos="relative" py={4} px={"2rem"}>
           <Flex h="100%" w="100%" {...carouselStyle}>
             {testimonials.map((testimonial, index) => (
               <Box

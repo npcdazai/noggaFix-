@@ -53,7 +53,7 @@ const TabsComponent = () => {
             alignItems="center"
             justifyContent="center"
             color={activeTab.id === tab.id ? "white" : "gray.400"}
-            px={{ base: "2rem", md: "4rem" }}
+            px={{ base: "1rem", md: "3rem" }}
             py={2}
             cursor="pointer"
             borderBottom={
@@ -65,7 +65,8 @@ const TabsComponent = () => {
             w="20%"
           >
             <Image
-              h="24px"
+              w="auto"
+              h="30px"
               src={tab.icon}
               alt={tab.label}
               filter={activeTab.id === tab.id ? "none" : "grayscale(100%)"}

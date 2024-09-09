@@ -86,7 +86,7 @@ const Home = () => {
       {Tech}
       {/* <Testi /> */}
       {testinomal}
-      {/* <Awards /> */}
+      <Awards />
       {/* <Banner /> */}
       {banner}
       {/* <Form /> */}

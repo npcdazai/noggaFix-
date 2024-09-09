@@ -15,11 +15,12 @@ const data = [
 
 const Timeline = () => {
   return (
-    <Box w="100%" color="white">
-      <Flex position="relative" justify="space-between" align="center">
+    <Box display={"flex"} flexDirection="column" gap={1} alignItems="center" w="100%" color="white" >
+      <Flex  w="100%" position="relative" justify="space-between" align="center">
         {data.slice(0, 3).map((item) => (
           <Box key={item.id} textAlign="center">
             <Box
+            
               px={5}
               py={3}
               borderRadius="md"
@@ -38,7 +39,7 @@ const Timeline = () => {
           </Box>
         ))}
       </Flex>
-      <Box position="relative">
+      <Box  w="100%" position="relative" display="flex" flexDirection="column" alignItems="center">
         <Image src={LineBar} h="100px" w="100%" />
         <Box
           px="5rem"
@@ -151,7 +152,7 @@ const Timeline = () => {
         </Box>
       </Box>
       <Flex
-        px={"7rem"}
+        w="60%"
         position="relative"
         justify="space-between"
         align="center"
