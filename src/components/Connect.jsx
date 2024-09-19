@@ -30,7 +30,7 @@ const Connect = () => {
         </Text>
         <WdiButton Context="Let’s Talk" />
       </Box>
-      <Image w="50%" zIndex={0} src={circles} />
+      <Image  h="600px" zIndex={0} src={circles} />
     </Container>
   );
 };
