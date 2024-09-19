@@ -21,10 +21,13 @@ import {
 import { useForm } from "react-hook-form";
 import { FiPaperclip } from "react-icons/fi";
 import captcha from "../assets/captcha.png";
+import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = () => {
   const [sliderValue, setSliderValue] = useState(0);
   const [fileAdded, setFileAdded] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
 
   const {
     register,
@@ -35,7 +38,28 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    if (!captchaToken) {
+      console.log("Please complete the CAPTCHA");
+      return;
+    }
+
+    const formData = { ...data, captchaToken };
+
+    try {
+      const response = axios.post("/api/submit", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response.data); // Handle the response from the backend
+    } catch (error) {
+      console.error("Error submitting the form", error);
+    }
+  };
+
+  const onCaptchaChange = (value) => {
+    setCaptchaToken(value);
+    console.log("Captcha value:", value); // The token to send to the backend
   };
 
   const handleClick = () => {
@@ -375,7 +399,10 @@ const Form = () => {
                 </Text>
               )}
               <Box>
-                {/* <Image src={captcha} w="147px" h="55px" borderRadius="1px" /> */}
+                <ReCAPTCHA
+                  sitekey="6LcAjUYqAAAAALCkNuAJKR3tT1D1QqWzXo-MECPE"
+                  onChange={onCaptchaChange}
+                />
               </Box>
             </Box>
 

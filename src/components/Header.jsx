@@ -53,14 +53,14 @@ const Header = () => {
       <Box>
         <Flex
           // px={{ base: "0px", md: "1.5rem", lg: "1.8rem" }}
-          py={{ base: 1, md: 1.3, lg: 2 }}
+          py={{ base: 1, md: 1.3, lg: 1.9 }}
           justifyContent="space-between"
           alignItems="center"
         >
           <Image
             ml={{ base: "10px", md: "1rem", lg: "2rem" }}
             src={logo}
-            h={{ base: "40px", md: "50px", lg: "67px" }}
+            h={{ base: "40px", md: "50px", lg: "60px" }}
             w="66px"
             alt="WDI"
           />
