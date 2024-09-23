@@ -10,7 +10,7 @@ import java from "../../assets/java.png";
 import python from "../../assets/phython.png";
 const techStack = [
   { name: "Flutter", image: fluter },
-  { name: "IOS", image: ios },
+  // { name: "IOS", image: ios },
   { name: "Swift", image: swift },
   { name: "React Native", image: reactNative },
   // { name: "Angular", image: angular },
@@ -18,7 +18,7 @@ const techStack = [
 ];
 const backend = [
   { name: "lavarel", image: lavarel },
-  { name: "java", image: java },
+  // { name: "java", image: java },
   { name: "node js", image: nodejs },
   { name: "python", image: python },
 ];
@@ -136,7 +136,7 @@ const Hybrid = () => {
           justifyContent="space-between"
           gap={4}
         >
-          {techStack.slice(2).map((tech) => (
+          {backend.slice(2).map((tech) => (
             <Box
               key={tech.name}
               w="288px"

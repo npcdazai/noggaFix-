@@ -8,23 +8,27 @@ import angular from "../../assets/anugular.png";
 import vue from "../../assets/vue.png";
 import lavarel from "../../assets/lavarel.png"
 import nodejs from "../../assets/nodejs.png"
+import fluter from "../../assets/fluter.png";
+import reactNative from "../../assets/reactNative.png";
 const techStack = [
-  { name: "HTML", image: htmlpng },
-  { name: "React", image: reactjs },
-  { name: "Code Igniter", image: codeIgniter },
-  { name: "Java", image: java },
-  { name: "Angular", image: angular },
-  { name: "Vue", image: vue },
+  // { name: "HTML", image: htmlpng },
+  // { name: "React", image: reactjs },
+  // { name: "Code Igniter", image: codeIgniter },
+  // { name: "Java", image: java },
+  // { name: "Angular", image: angular },
+  // { name: "Vue", image: vue },
+  { name: "React Native", image: reactNative },
+  { name: "Fluter", image: fluter },
 ];
 
 
 const backEnd = [
-  { name: "lavarel", image: lavarel },
-  { name: "node", image: nodejs },
-  { name: "Code Igniter", image: codeIgniter },
+  // { name: "lavarel", image: lavarel },
+  // { name: "node", image: nodejs },
+ 
   { name: "Java", image: java },
-  { name: "Angular", image: angular },
-  { name: "Vue", image: vue },
+  // { name: "Angular", image: angular },
+  // { name: "Vue", image: vue },
 ];
 
 const Hybrid = () => {

@@ -22,8 +22,8 @@ import BannerMobile from "../components/ui/Mobile/BannerMobile";
 import FormMobile from "../components/ui/Mobile/FormMobile";
 import FAQMobile from "../components/ui/Mobile/FQAMobile";
 import FooterMobile from "../components/ui/Mobile/FooterMobile";
-import FooterComMobile from "../components/ui/Mobile/FooterComMobile"
-import Connect from "../components/Connect"
+import FooterComMobile from "../components/ui/Mobile/FooterComMobile";
+import Connect from "../components/Connect";
 
 const Home = () => {
   const heroComponent = useBreakpointValue({
@@ -74,7 +74,7 @@ const Home = () => {
   const footercom = useBreakpointValue({
     base: <FooterComMobile />,
     lg: <FooterCom />,
-  })
+  });
 
   return (
     <>
@@ -91,10 +91,10 @@ const Home = () => {
       {/* <Banner /> */}
       {banner}
       {/* <Form /> */}
+      <Connect />
       {form}
       {/* <FAQs/> */}
       {faq}
-      <Connect/>
       {footer}
       {footercom}
       {/* <Footer /> */}

@@ -5,15 +5,21 @@ import ios from "../../assets/ios.png";
 import swift from "../../assets/swifty.png";
 import reactNative from "../../assets/reactNative.png";
 import kotlin from "../../assets/kotlin.png";
+import lavarel from "../../assets/lavarel.png";
 import nodejs from "../../assets/nodejs.png";
 import java from "../../assets/java.png";
 import python from "../../assets/phython.png";
 const techStack = [
   { name: "Kotlin", image: kotlin },
   { name: "React Native", image: reactNative },
+  { name: "Fluter", image: fluter },
 ];
 const backend = [
   { name: "java", image: java },
+  { name: "lavarel", image: lavarel },
+  // { name: "java", image: java },
+  { name: "node js", image: nodejs },
+  { name: "python", image: python },
 ];
 
 const Hybrid = () => {
@@ -129,7 +135,7 @@ const Hybrid = () => {
           justifyContent="space-between"
           gap={4}
         >
-          {techStack.slice(2).map((tech) => (
+          {backend.slice(2).map((tech) => (
             <Box
               key={tech.name}
               w="288px"

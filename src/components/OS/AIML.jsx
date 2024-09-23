@@ -9,11 +9,11 @@ import nodejs from "../../assets/nodejs.png";
 import java from "../../assets/java.png";
 import python from "../../assets/phython.png";
 const techStack = [
-  { name: "AI/ML", image: aiml },
+  // { name: "AI/ML", image: aiml },
   { name: "Tensorflow", image: tensorflow },
-  { name: "Scikit", image: scikit },
-  { name: "Tableau", image: tableau },
-  { name: "Machine Learning", image: machineLearning },
+  // { name: "Scikit", image: scikit },
+  // { name: "Tableau", image: tableau },
+  // { name: "Machine Learning", image: machineLearning },
 ];
 const backend = [
   { name: "java", image: java },
