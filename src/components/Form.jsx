@@ -377,9 +377,11 @@ const Form = () => {
               maxW="1186px"
               display="flex"
               flexDirection="column"
+              alignItems="center"
               gap={4}
+              py={4}
             >
-              <FormLabel color="#FFFFFF">
+              {/* <FormLabel color="#FFFFFF">
                 Please type the letters below
               </FormLabel>
               <Textarea
@@ -397,7 +399,7 @@ const Form = () => {
                 <Text color="red.400" mt={2}>
                   {errors.captcha.message}
                 </Text>
-              )}
+              )} */}
               <Box>
                 <ReCAPTCHA
                   sitekey="6LcAjUYqAAAAALCkNuAJKR3tT1D1QqWzXo-MECPE"
