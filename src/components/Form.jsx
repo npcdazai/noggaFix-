@@ -437,7 +437,7 @@ const Form = () => {
               )} */}
               <Box>
                 <ReCAPTCHA
-                  sitekey='6Lf7t04qAAAAACHaWCO3IsR0OBhl-1fy0j0MbaHi'
+                  sitekey='6Ldhwk4qAAAAAB-Xbyvp8BtmnyrBqBbpnC1skOb6'
                   onChange={onCaptchaChange}
                 />
               </Box>
@@ -449,6 +449,7 @@ const Form = () => {
                 w="100%"
                 maxW="912px"
                 h="55px"
+                color="white"
                 borderRadius="0px"
                 type="submit"
                 onClick={handleSubmit(onSubmit)}
