@@ -442,11 +442,11 @@ const Form = () => {
                 </Text>
               )} */}
                 <Box>
-                  {/* <ReCAPTCHA
+                  <ReCAPTCHA
                     ref={recaptchaRef}
-                    sitekey="6LeJxU4qAAAAAO9S71T7dh4xc0N1g5vrfT0Vaoi-"
-                    onChange={onCaptchaChange}
-                  /> */}
+                    sitekey="6LdsyU4qAAAAAGlNpH3hZuf76Y1FkQjXrtiAB_3C"
+                    onChange={(val)=> {setCaptchaToken(val)}}
+                  />
                   {/* <Box
                   className="g-recaptcha"
                   // data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"
