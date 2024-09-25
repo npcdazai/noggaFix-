@@ -26,6 +26,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Spinner } from "@chakra-ui/react";
 import { TbNumber2Small } from "react-icons/tb";
 
+
 const Form = () => {
   const [sliderValue, setSliderValue] = useState(0);
   const [fileAdded, setFileAdded] = useState(false);
@@ -33,6 +34,8 @@ const Form = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
   const [formError, setformError] = useState(null);
+  const [captchaValue, setCaptchaValue] = useState(null);
+
 
   const {
     register,
@@ -44,10 +47,14 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    // if (!captchaToken) {
-    //   console.log("Please complete the CAPTCHA");
-    //   return;
-    // }
+    if (!captchaToken) {
+      console.log("Please complete the CAPTCHA");
+      return;
+    }
+
+    const handleCaptcha = (value) => {
+      setCaptchaValue(value);
+    };
 
     const formData = { ...data, captchaToken };
     console.log(formData);
@@ -429,10 +436,10 @@ const Form = () => {
                 </Text>
               )} */}
               <Box>
-                {/* <ReCAPTCHA
-                  sitekey="6LcAjUYqAAAAALCkNuAJKR3tT1D1QqWzXo-MECPE"
+                <ReCAPTCHA
+                  sitekey='6Lf7t04qAAAAACHaWCO3IsR0OBhl-1fy0j0MbaHi'
                   onChange={onCaptchaChange}
-                /> */}
+                />
               </Box>
             </Box>
 

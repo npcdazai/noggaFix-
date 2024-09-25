@@ -59,7 +59,7 @@ const Header = () => {
           <ScrollLink
             to="hero"
             smooth={true}
-            duration={800} // Adjust the duration as needed for a smoother scroll
+            duration={800}
           >
             <Image
               ml={{ base: "10px", md: "1rem", lg: "2rem" }}
