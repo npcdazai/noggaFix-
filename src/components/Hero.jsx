@@ -12,7 +12,7 @@ const circlesData = [
 
 const Hero = () => {
   return (
-      <Box bgColor="black" h="100%" width={["25%", "50%", "100%"]} >
+      <Box bgColor="black" id="hero" h="100%" width={["25%", "50%", "100%"]} >
         <Flex
           justifyContent="space-between"
           spacing={4}

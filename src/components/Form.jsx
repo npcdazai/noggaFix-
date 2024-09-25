@@ -118,7 +118,7 @@ const Form = () => {
   };
 
   return (
-    <Container maxW="container.2xl" p={{ base: "1rem", lg: "3rem" }} bg="black">
+    <Container id="contact-section" maxW="container.2xl" p={{ base: "1rem", lg: "3rem" }} bg="black">
       <Box
         bg="#0F0F0F"
         display="flex"

@@ -10,6 +10,7 @@ import {
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const animationKeyframes = keyframes`
   0% { opacity: 0; transform: translateY(-10px); }
@@ -21,14 +22,13 @@ const animation = `${animationKeyframes} 3s infinite`;
 
 const titles = [
   "Experience of over 22 years",
-  "Expertise in all  Major Technologies",
+  "Expertise in all Major Technologies",
   "Award-winning portfolio",
   "Accurate business Analysis",
   "Immaculate project planning",
-  "Excellent ane timely execution",
-  "Excellent ane timely execution",
-  "State-of-the art infrastructure",
-  "Integrity and sincerity ",
+  "Excellent and timely execution",
+  "State-of-the-art infrastructure",
+  "Integrity and sincerity",
   "A large team of developers",
 ];
 
@@ -41,7 +41,7 @@ const Header = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  });
+  }, []);
 
   return (
     <Container
@@ -52,18 +52,23 @@ const Header = () => {
     >
       <Box>
         <Flex
-          // px={{ base: "0px", md: "1.5rem", lg: "1.8rem" }}
           py={{ base: 1, md: 1.3, lg: 1.9 }}
           justifyContent="space-between"
           alignItems="center"
         >
-          <Image
-            ml={{ base: "10px", md: "1rem", lg: "2rem" }}
-            src={logo}
-            h={{ base: "40px", md: "50px", lg: "60px" }}
-            w="66px"
-            alt="WDI"
-          />
+          <ScrollLink
+            to="hero"
+            smooth={true}
+            duration={800} // Adjust the duration as needed for a smoother scroll
+          >
+            <Image
+              ml={{ base: "10px", md: "1rem", lg: "2rem" }}
+              src={logo}
+              h={{ base: "40px", md: "50px", lg: "60px" }}
+              w="66px"
+              alt="WDI"
+            />
+          </ScrollLink>
           <Box
             w={"100%"}
             h={{ base: "30px", md: "50px", lg: "66px" }}
@@ -83,7 +88,11 @@ const Header = () => {
               {titles[currentIndex]}
             </Text>
           </Box>
-          <NavLink>
+          <ScrollLink
+            to="contact-section"
+            smooth={true}
+            duration={800} // Adjust the duration as needed for a smoother scroll
+          >
             <Button
               bgColor="#e8155d"
               _hover={{ bg: "#e8155d" }}
@@ -97,7 +106,7 @@ const Header = () => {
             >
               Contact Us
             </Button>
-          </NavLink>
+          </ScrollLink>
         </Flex>
       </Box>
     </Container>
