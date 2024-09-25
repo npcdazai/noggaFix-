@@ -3,26 +3,22 @@
 
 
 /* Style the scrollbar */
-::-webkit-scrollbar {
-    width: 12px;  /* Width of the entire scrollbar */
-    height: 12px; /* Height of the entire scrollbar */
+/* ::-webkit-scrollbar {
+    width: 12px;  
+    height: 12px; 
   }
   
-  /* Style the scrollbar track */
   ::-webkit-scrollbar-track {
-    background: black; /* Color of the track */
-    border-radius: 10px;  /* Rounded corners */
+    background: black; 
+    border-radius: 10px;  
   }
-  
-  /* Style the scrollbar thumb */
   ::-webkit-scrollbar-thumb {
-    background-color: #E5195E; /* Color of the thumb */
-    border-radius: 10px;    /* Rounded corners */
-    border: 3px solid  black; /* Space around the thumb */
+    background-color: #E5195E; 
+    border-radius: 10px;   
+    border: 3px solid  black; 
   }
   
-  /* Style the scrollbar thumb on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #E5195E; /* Color of the thumb when hovered */
-  }
+    background-color: #E5195E; 
+  } */
   
