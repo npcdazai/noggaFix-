@@ -436,10 +436,10 @@ const Form = () => {
                 </Text>
               )} */}
               <Box>
-                <ReCAPTCHA
+                {/* <ReCAPTCHA
                   sitekey='6Ldhwk4qAAAAAB-Xbyvp8BtmnyrBqBbpnC1skOb6'
                   onChange={onCaptchaChange}
-                />
+                /> */}
               </Box>
             </Box>
 
