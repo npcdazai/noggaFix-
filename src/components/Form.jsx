@@ -23,11 +23,16 @@ import { FiPaperclip } from "react-icons/fi";
 import captcha from "../assets/captcha.png";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Spinner } from "@chakra-ui/react";
+import { TbNumber2Small } from "react-icons/tb";
 
 const Form = () => {
   const [sliderValue, setSliderValue] = useState(0);
   const [fileAdded, setFileAdded] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
+  const [formError, setformError] = useState(null);
 
   const {
     register,
@@ -35,31 +40,54 @@ const Form = () => {
     formState: { errors },
     setValue,
     trigger,
+    reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    if (!captchaToken) {
-      console.log("Please complete the CAPTCHA");
-      return;
-    }
+  const onSubmit = async (data) => {
+    // if (!captchaToken) {
+    //   console.log("Please complete the CAPTCHA");
+    //   return;
+    // }
 
     const formData = { ...data, captchaToken };
+    console.log(formData);
+    setLoading(true);
+    setformError(null);
 
     try {
-      const response = axios.post("/api/submit", formData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      console.log(response.data); // Handle the response from the backend
+      const response = await axios.post(
+        "https://contact.wdipl.com/api/v1/mails/client-enquiry-for-idea",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(response);
+
+      if (response.status === 200) {
+        console.log(response);
+        setSuccess("Your message has been sent successfully");
+        setformError(null);
+        reset();
+        setSliderValue(0);
+      } else {
+        setformError("Failed to send message");
+      }
     } catch (error) {
       console.error("Error submitting the form", error);
+      setformError("There was an error submitting the form.");
+    } finally {
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
     }
   };
 
   const onCaptchaChange = (value) => {
     setCaptchaToken(value);
-    console.log("Captcha value:", value); // The token to send to the backend
+    console.log("Captcha value:", value);
   };
 
   const handleClick = () => {
@@ -141,8 +169,8 @@ const Form = () => {
                 },
                 {
                   label: "Enter your contact number",
-                  type: "text",
-                  name: "contact",
+                  type: "number",
+                  name: "contactnumber",
                 },
               ].map((field, index) => (
                 <Box w="100%" key={index}>
@@ -183,7 +211,7 @@ const Form = () => {
                 {
                   label: "Where did you hear about us? *",
                   options: ["Source 1", "Source 2", "Source 3"],
-                  name: "source",
+                  name: "aboutus",
                 },
               ].map((selectField, index) => (
                 <Box w="100%" key={index + 3}>
@@ -220,7 +248,7 @@ const Form = () => {
                 Tell us about your project and business challenge.
               </FormLabel>
               <Textarea
-                {...register("projectDetails", {
+                {...register("project_challenges", {
                   required: "Project details are required",
                 })}
                 border="1px solid #E5195E"
@@ -230,9 +258,9 @@ const Form = () => {
                 color="white"
                 minH="65px"
               />
-              {errors.projectDetails && (
+              {errors.project_challenges && (
                 <Text color="red.400" mt={2}>
-                  {errors.projectDetails.message}
+                  {errors.project_challenges.message}
                 </Text>
               )}
             </Box>
@@ -250,7 +278,7 @@ const Form = () => {
                   When would you like to start
                 </FormLabel>
                 <Select
-                  {...register("startDate", {
+                  {...register("would_like_start", {
                     required: "Start date is required",
                   })}
                   border="1px solid #E5195E"
@@ -262,9 +290,9 @@ const Form = () => {
                   <option value="option2">Option 2</option>
                   <option value="option3">Option 3</option>
                 </Select>
-                {errors.startDate && (
+                {errors.would_like_start && (
                   <Text color="red.400" mt={2}>
-                    {errors.startDate.message}
+                    {errors.would_like_start.message}
                   </Text>
                 )}
               </Box>
@@ -401,10 +429,10 @@ const Form = () => {
                 </Text>
               )} */}
               <Box>
-                <ReCAPTCHA
+                {/* <ReCAPTCHA
                   sitekey="6LcAjUYqAAAAALCkNuAJKR3tT1D1QqWzXo-MECPE"
                   onChange={onCaptchaChange}
-                />
+                /> */}
               </Box>
             </Box>
 
@@ -417,8 +445,21 @@ const Form = () => {
                 borderRadius="0px"
                 type="submit"
                 onClick={handleSubmit(onSubmit)}
+                isLoading={loading}
+                _hover={{ bg: "#D41554" }}
+                disabled={loading} // Disable button when loading
               >
-                Submit
+                {loading ? (
+                  <Spinner
+                    thickness="4px"
+                    speed="0.65s"
+                    emptyColor="gray.200"
+                    color="blue.500"
+                    size="xl"
+                  />
+                ) : (
+                  "Submit"
+                )}
               </Button>
             </Box>
           </FormControl>

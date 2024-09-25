@@ -56,7 +56,13 @@ const Hybrid = () => {
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+              _hover={{
+                filter: "grayscale(0%)",
+                bgColor: "#1F1F1F",
+                transform: "translateY(-5px)",
+                transitionDuration: "0.4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
             >
               <Image src={tech.image} h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
@@ -84,7 +90,13 @@ const Hybrid = () => {
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+              _hover={{
+                filter: "grayscale(0%)",
+                bgColor: "#1F1F1F",
+                transform: "translateY(-5px)",
+                transitionDuration: "0.4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
             >
               <Image src={tech.image} h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
@@ -119,7 +131,13 @@ const Hybrid = () => {
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+              _hover={{
+                filter: "grayscale(0%)",
+                bgColor: "#1F1F1F",
+                transform: "translateY(-5px)",
+                transitionDuration: "0.4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
             >
               <Image src={tech.image} w="45.31px" h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
@@ -147,7 +165,13 @@ const Hybrid = () => {
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+              _hover={{
+                filter: "grayscale(0%)",
+                bgColor: "#1F1F1F",
+                transform: "translateY(-5px)",
+                transitionDuration: "0.4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
             >
               <Image src={tech.image} w="45.31px" h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">

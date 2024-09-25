@@ -6,8 +6,8 @@ import codeIgniter from "../../assets/codeigniter.png";
 import java from "../../assets/java.png";
 import angular from "../../assets/anugular.png";
 import vue from "../../assets/vue.png";
-import lavarel from "../../assets/lavarel.png"
-import nodejs from "../../assets/nodejs.png"
+import lavarel from "../../assets/lavarel.png";
+import nodejs from "../../assets/nodejs.png";
 import fluter from "../../assets/fluter.png";
 import reactNative from "../../assets/reactNative.png";
 const techStack = [
@@ -21,11 +21,10 @@ const techStack = [
   { name: "Fluter", image: fluter },
 ];
 
-
 const backEnd = [
   // { name: "lavarel", image: lavarel },
   // { name: "node", image: nodejs },
- 
+
   { name: "Java", image: java },
   // { name: "Angular", image: angular },
   // { name: "Vue", image: vue },
@@ -65,7 +64,13 @@ const Hybrid = () => {
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+              _hover={{
+                filter: "grayscale(0%)",
+                bgColor: "#1F1F1F",
+                transform: "translateY(-5px)",
+                transitionDuration: "0.4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
             >
               <Image src={tech.image} w="45.31px" h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
@@ -93,7 +98,13 @@ const Hybrid = () => {
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+              _hover={{
+                filter: "grayscale(0%)",
+                bgColor: "#1F1F1F",
+                transform: "translateY(-5px)",
+                transitionDuration: "0.4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
             >
               <Image src={tech.image} w="45.31px" h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
@@ -128,7 +139,13 @@ const Hybrid = () => {
               justifyContent="space-between"
               alignItems="center"
               filter="grayscale(100%)"
-              _hover={{ filter: "grayscale(0%)", bgColor: "#1F1F1F" }}
+              _hover={{
+                filter: "grayscale(0%)",
+                bgColor: "#1F1F1F",
+                transform: "translateY(-5px)",
+                transitionDuration: "0.4s",
+                transitionTimingFunction: "ease-in-out",
+              }}
             >
               <Image src={tech.image} w="45.31px" h="50px" />
               <Text fontSize="16px" fontWeight={400} color="#FFFFFF">
