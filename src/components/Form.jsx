@@ -654,7 +654,7 @@ const Form = () => {
               <Box>
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey="6LdsyU4qAAAAAGlNpH3hZuf76Y1FkQjXrtiAB_3C"
+                  sitekey="6Lcrmk8qAAAAAB7S7I_OWrRAgkrlKbOhMaQXmutU"
                   onChange={(val) => {
                     setCaptchaToken(val);
                   }}
