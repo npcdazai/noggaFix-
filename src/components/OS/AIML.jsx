@@ -11,11 +11,16 @@ import python from "../../assets/phython.png";
 const techStack = [
   // { name: "AI/ML", image: aiml },
   { name: "Tensorflow", image: tensorflow },
+  { name: "java", image: java },
+  { name: "python", image: python },
   // { name: "Scikit", image: scikit },
   // { name: "Tableau", image: tableau },
   // { name: "Machine Learning", image: machineLearning },
 ];
-const backend = [{ name: "java", image: java }];
+const backend = [
+  { name: "java", image: java },
+  { name: "python", image: python },
+];
 
 const Hybrid = () => {
   return (
@@ -27,9 +32,9 @@ const Hybrid = () => {
       bgColor="black"
       gap={3}
     >
-      <Heading color="#ACACAC" fontWeight={500} fontSize="18px" mt="1rem">
+      {/* <Heading color="#ACACAC" fontWeight={500} fontSize="18px" mt="1rem">
         Front-End
-      </Heading>
+      </Heading> */}
       <Box display="flex" alignItems="center" flexDirection="column">
         <Box
           display={"flex"}
@@ -102,10 +107,10 @@ const Hybrid = () => {
         </Box>
       </Box>
 
-      <Heading color="#ACACAC" fontWeight={500} fontSize="18px" mt="1rem">
+      {/* <Heading color="#ACACAC" fontWeight={500} fontSize="18px" mt="1rem">
         Back-End
-      </Heading>
-      <Box display="flex" alignItems="center" flexDirection="column">
+      </Heading> */}
+      {/* <Box display="flex" alignItems="center" flexDirection="column">
         <Box
           display={"flex"}
           flexDirection="row"
@@ -169,7 +174,7 @@ const Hybrid = () => {
             </Box>
           ))}
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

@@ -9,6 +9,7 @@ import vue from "../../assets/vue.png";
 import lavarel from "../../assets/lavarel.png";
 import nodejs from "../../assets/nodejs.png";
 import fluter from "../../assets/fluter.png";
+import python from "../../assets/phython.png";
 import reactNative from "../../assets/reactNative.png";
 const techStack = [
   // { name: "HTML", image: htmlpng },
@@ -19,12 +20,12 @@ const techStack = [
   // { name: "Vue", image: vue },
   { name: "React Native", image: reactNative },
   { name: "Fluter", image: fluter },
+  { name: "python", image: python }
 ];
 
 const backEnd = [
-  // { name: "lavarel", image: lavarel },
-  // { name: "node", image: nodejs },
-
+  { name: "lavarel", image: lavarel },
+  { name: "node", image: nodejs },
   { name: "Java", image: java },
   // { name: "Angular", image: angular },
   // { name: "Vue", image: vue },
