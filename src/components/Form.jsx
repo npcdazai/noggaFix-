@@ -18,6 +18,7 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
+import { useToast } from '@chakra-ui/react'
 import { useForm } from "react-hook-form";
 import { FiPaperclip } from "react-icons/fi";
 import captcha from "../assets/captcha.png";
@@ -35,6 +36,7 @@ const Form = () => {
   const [formError, setformError] = useState(null);
   const [captchaValue, setCaptchaValue] = useState(null);
   const recaptchaRef = createRef();
+  const toast = useToast(); 
   const {
     register,
     handleSubmit,
@@ -50,8 +52,9 @@ const Form = () => {
       return;
     }
 
+ 
     const recaptchaValue = recaptchaRef.current.getValue();
-    this.props.onSubmit(recaptchaValue);
+    // this.props.onSubmit(recaptchaValue);
 
     const handleCaptcha = (value) => {
       setCaptchaValue(value);
@@ -80,6 +83,15 @@ const Form = () => {
         setformError(null);
         reset();
         setSliderValue(0);
+
+        toast({
+          title: 'Message sent.',
+          description: "Your form has been successfully sent.",
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        });
+
       } else {
         setformError("Failed to send message");
       }
@@ -527,13 +539,13 @@ const Form = () => {
                   type="file"
                   {...register("fileInput", {
                     validate: (file) =>
-                      file &&
-                      ["image/png", "image/jpeg", "application/pdf"].includes(
+                      !file || // Allow skipping the input
+                      (["image/png", "image/jpeg", "application/pdf"].includes(
                         file.type
                       ) &&
-                      file.size <= 5 * 1024 * 1024
+                        file.size <= 5 * 1024 * 1024)
                         ? true
-                        : "Invalid file type or size. Only PNG, JPEG, and PDF files under 5MB are allowed.",
+                        : true,
                   })}
                   onChange={(e) => {
                     handleChange(e);
@@ -654,6 +666,8 @@ const Form = () => {
               <Box>
                 <ReCAPTCHA
                   ref={recaptchaRef}
+                  // sitekey="6LdsyU4qAAAAAGlNpH3hZuf76Y1FkQjXrtiAB_3C" 
+                  // localhost
                   sitekey="6Lcrmk8qAAAAAB7S7I_OWrRAgkrlKbOhMaQXmutU"
                   onChange={(val) => {
                     setCaptchaToken(val);
