@@ -20,13 +20,14 @@ const techStack = [
   // { name: "Vue", image: vue },
   { name: "React Native", image: reactNative },
   { name: "Fluter", image: fluter },
-  { name: "python", image: python }
+  
 ];
 
 const backEnd = [
   { name: "lavarel", image: lavarel },
   { name: "node", image: nodejs },
   { name: "Java", image: java },
+  { name: "python", image: python }
   // { name: "Angular", image: angular },
   // { name: "Vue", image: vue },
 ];
