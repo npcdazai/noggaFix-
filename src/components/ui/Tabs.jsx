@@ -10,14 +10,21 @@ import Simpletend from "../Timelines/Simpletend";
 import ReGroup from "../Timelines/ReGroup";
 import Prosperty from "../Timelines/Prosperty";
 import Woka from "../Timelines/Woka";
-
-const GDFComponent = () => <GSF />;
-const HomeComponent = () => <Simpletend />;
-const SyncComponent = () => <ReGroup />;
-const ProsperityComponent = () => <Prosperty />;
-const ViewComponent = () => <Woka />;
+import { useBreakpointValue } from "@chakra-ui/react";
+import GSFMobile from "../../components/ui/Mobile/GSFMobile";
 
 const TabsComponent = () => {
+  const GDFComponent = () => {
+    const GSfs = useBreakpointValue({
+      base: <GSFMobile />,
+      lg: <GSF />,
+    });
+    return <>{GSfs}</>;
+  };
+  const HomeComponent = () => <Simpletend />;
+  const SyncComponent = () => <ReGroup />;
+  const ProsperityComponent = () => <Prosperty />;
+  const ViewComponent = () => <Woka />;
   const [activeTab, setActiveTab] = useState({
     id: "tab1",
     label: "GDF",

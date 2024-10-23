@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 import FooterCom from "../components/FooterCom";
 import { useBreakpointValue } from "@chakra-ui/react";
 import HeroMobile from "../components/ui/Mobile/HeroMobile";
-// import TimeLinesMobile from "../components/ui/Mobile/TimrLinesMobile";
+import TimeLinesMobile from "../components/ui/Mobile/TimrLinesMobile";
 import ServiceMobile from "../components/ui/Mobile/ServiceMobile";
 import PortFolioMobile from "../components/ui/Mobile/ProftFolioMobile";
 import TechMobile from "../components/ui/Mobile/Tech";
@@ -26,11 +26,17 @@ import FooterComMobile from "../components/ui/Mobile/FooterComMobile";
 import Connect from "../components/Connect";
 import AwardMobile from "../components/ui/Mobile/AwardMobile";
 import ConnectMobile from "../components/ui/Mobile/ConnectMobile";
+import GSFMobile from "../components/ui/Mobile/GSFMobile"
 
 const Home = () => {
   const heroComponent = useBreakpointValue({
     base: <HeroMobile />,
     lg: <Hero />,
+  });
+
+  const Timeliness = useBreakpointValue({
+    base: <TimeLinesMobile />,
+    lg: <TimeLines />,
   });
 
   const service = useBreakpointValue({
@@ -90,7 +96,8 @@ const Home = () => {
   return (
     <>
       {heroComponent}
-      <TimeLines />
+      {/* <TimeLines /> */}
+      {Timeliness}
       {service}
       {/* <Protfolio /> */}
       {PortFolio}
