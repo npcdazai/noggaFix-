@@ -8,7 +8,7 @@ import machineLearning from "../../assets/machineLearning.png";
 import nodejs from "../../assets/nodejs.png";
 import java from "../../assets/java.png";
 import python from "../../assets/phython.png";
-import bigData from "../../assets/bigData.png"
+import bigData from "../../assets/bigdata.png"
 const techStack = [
   // { name: "AI/ML", image: aiml },
   { name: "Tensorflow", image: tensorflow },
