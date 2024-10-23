@@ -1,6 +1,7 @@
 import { Container, Flex, Image, Box, Text } from "@chakra-ui/react";
 import React from "react";
 import LineBar from "../../../assets/imgpsh_fullsize_anim.png";
+
 const data = [
   { id: 1, phase: "Strategy and Planning", date: "June 2023 - July 2023" },
   { id: 2, phase: "App Development", date: "August 2023 - September 2023" },
@@ -16,23 +17,24 @@ const data = [
 const Timeline = () => {
   return (
     <Box
-      display={"flex"}
-      flexDirection="column"
-      gap={4}
-      alignItems="center"
+      display="flex"
+      flexDirection="row"
+      gap={1}
+      alignItems="flex-start"
       w="100%"
       color="white"
     >
+      {/* Upper Flex for the first 3 timeline items */}
       <Flex
         w="100%"
         position="relative"
-        justify={{ base: "center", md: "space-between" }}
-        flexDirection={{ base: "column", md: "row" }}
-        align={{ base: "center", md: "flex-start" }}
-        gap={{ base: 2, md: 0 }}
+        justify="space-between"
+        align="center"
+        flexDirection={{ base: "column", md: "row" }} // Stack on mobile
+        gap={{ base: 4, md: 0 }} // Add gap on mobile
       >
         {data.slice(0, 3).map((item) => (
-          <Box key={item.id} textAlign="center" w={{ base: "90%", md: "auto" }}>
+          <Box key={item.id} textAlign="center">
             <Box
               px={5}
               py={3}
@@ -45,7 +47,7 @@ const Timeline = () => {
               }}
             >
               <Text fontSize={{ base: "md", md: "lg" }}>{item.phase}</Text>
-              <Text fontSize={{ base: "sm", md: "17.83px" }} mt={2}>
+              <Text fontSize="17.83px" mt={2}>
                 {item.date}
               </Text>
             </Box>
@@ -60,33 +62,44 @@ const Timeline = () => {
         flexDirection="column"
         alignItems="center"
       >
-        <Image src={LineBar} h="80px" w="100%" />
+        <Image
+          src={LineBar}
+          h="100%"
+          w="100%"
+          transform={{ base: "rotate(90deg)", md: "rotate(0deg)" }} // Rotate on mobile
+        />
         <Box
-          px={{ base: "1rem", md: "5rem" }}
+          px="5rem"
           position="absolute"
-          top={{ base: "2rem", md: "3rem" }}
-          display={"flex"}
+          top="0rem"
+          display="flex"
           justifyContent="space-between"
           w="100%"
+          gap={8}
+          flexDirection="column" 
         >
           {Array(5)
-            .fill(null)
-            .map((_, index) => (
+            .fill("")
+            .map((_, idx) => (
               <Box
-                key={index}
+                key={idx}
                 as="button"
                 borderRadius="50%"
-                w="6px"
-                h="6px"
+                w="8.34px"
+                h="8.34px"
                 bgColor="#E5195E"
+                marginBottom={{ base: "1rem", md: 0 }} // Add margin on mobile
               >
                 <Box
+                  top="-2.8px"
+                  right="7px"
                   as="button"
                   borderRadius="50%"
-                  w="18px"
-                  h="18px"
-                  position="relative"
+                  w="22.94px"
+                  h="22.94px"
+                  px="0"
                   marginTop="-1rem"
+                  position="relative"
                   bgColor="#E5195E42"
                 />
               </Box>
@@ -94,17 +107,17 @@ const Timeline = () => {
         </Box>
       </Box>
 
-      {/* Bottom Timeline Phases */}
+      {/* Lower Flex for the remaining 2 timeline items */}
       <Flex
-        w="100%"
+        w="60%"
         position="relative"
-        justify={{ base: "center", md: "space-between" }}
-        flexDirection={{ base: "column", md: "row" }}
-        align={{ base: "center", md: "flex-start" }}
-        gap={{ base: 2, md: 0 }}
+        justify="space-between"
+        align="center"
+        flexDirection={{ base: "column", md: "row" }} // Stack on mobile
+        gap={{ base: 4, md: 0 }} // Add gap on mobile
       >
         {data.slice(3, 5).map((item) => (
-          <Box key={item.id} textAlign="center" w={{ base: "90%", md: "auto" }}>
+          <Box key={item.id} textAlign="center">
             <Box
               px={5}
               py={3}
@@ -117,7 +130,7 @@ const Timeline = () => {
               }}
             >
               <Text fontSize={{ base: "md", md: "lg" }}>{item.phase}</Text>
-              <Text fontSize={{ base: "sm", md: "md" }} mt={2}>
+              <Text fontSize="md" mt={2}>
                 {item.date}
               </Text>
             </Box>

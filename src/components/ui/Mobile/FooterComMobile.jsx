@@ -68,9 +68,9 @@ const FooterCom = () => {
       display="flex"
       flexDirection="row"
       flexWrap="wrap"
-      justifyContent="space-between"
+      justifyContent="center"
       w="100%"
-    //   alignItems="center"
+      alignItems="center"
     >
       <Box w="80%" display="grid" gridTemplateColumns="repeat(2, 1fr)" gap={"4rem"}>
         {footerData.map((val) => (
@@ -101,13 +101,13 @@ const FooterCom = () => {
           </Box>
         ))}
 
-        <Box display="flex" flexDirection="column" gap={4}>
+        <Box display="flex" flexDirection="column" alignItems="flex-start" gap={6}>
           <Image src={logo} w={"56px"} h="57px" />
           <Text
             _hover={{ color: "#E5195E", cursor: "pointer" }}
             color="#E6E6E6"
             fontWeight={300}
-            fontSize="14px"
+            fontSize="small"
           >
             ©Copyright 2023 WDIPL – Software company. All rights reserved
           </Text>
@@ -135,8 +135,9 @@ const FooterCom = () => {
       <Box
         display="flex"
         flexDirection="column"
-        alignItems="flex-start"
+        alignItems="center"
         gap={6}
+        mt={"3rem"}
       >
         <Box display="flex" flexDirection="column" alignItems="center" gap={3}>
           <Text color="#FFFFFF" fontWeight="400" fontSize="18px">
@@ -151,6 +152,7 @@ const FooterCom = () => {
             alignItems="center"
             height="38px"
             gap={5}
+            w="100%"
             _hover={{ bgColor: "#C01550" }}
           >
             <Image width="28px" height="28px" src={pdf} alt="PDF icon" />
