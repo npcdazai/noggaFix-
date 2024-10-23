@@ -8,17 +8,18 @@ import machineLearning from "../../assets/machineLearning.png";
 import nodejs from "../../assets/nodejs.png";
 import java from "../../assets/java.png";
 import python from "../../assets/phython.png";
+import bigData from "../../assets/bigData.png"
 const techStack = [
   // { name: "AI/ML", image: aiml },
   { name: "Tensorflow", image: tensorflow },
-  { name: "java", image: java },
+  // { name: "java", image: java },
   { name: "python", image: python },
   // { name: "Scikit", image: scikit },
-  // { name: "Tableau", image: tableau },
-  // { name: "Machine Learning", image: machineLearning },
+  { name: "Big Data", image: bigData },
+  { name: "Machine Learning", image: machineLearning },
 ];
 const backend = [
-  { name: "java", image: java },
+  // { name: "java", image: java },
   { name: "python", image: python },
 ];
 

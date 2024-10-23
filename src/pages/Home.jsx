@@ -24,6 +24,8 @@ import FAQMobile from "../components/ui/Mobile/FQAMobile";
 import FooterMobile from "../components/ui/Mobile/FooterMobile";
 import FooterComMobile from "../components/ui/Mobile/FooterComMobile";
 import Connect from "../components/Connect";
+import AwardMobile from "../components/ui/Mobile/AwardMobile";
+import ConnectMobile from "../components/ui/Mobile/ConnectMobile";
 
 const Home = () => {
   const heroComponent = useBreakpointValue({
@@ -76,6 +78,15 @@ const Home = () => {
     lg: <FooterCom />,
   });
 
+  const Award = useBreakpointValue({
+    base: <AwardMobile />,
+    lg: <Awards />,
+  });
+
+  const ConnectM = useBreakpointValue({
+    base: <ConnectMobile />,
+    lg: <Connect />,
+  });
   return (
     <>
       {heroComponent}
@@ -87,11 +98,12 @@ const Home = () => {
       {Tech}
       {/* <Testi /> */}
       {testinomal}
-      <Awards />
+      {Award}
       {/* <Banner /> */}
       {banner}
       {/* <Form /> */}
-      <Connect />
+      {/* <Connect /> */}
+      {ConnectM}
       {form}
       {/* <FAQs/> */}
       {faq}

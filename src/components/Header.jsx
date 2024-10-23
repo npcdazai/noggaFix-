@@ -11,6 +11,7 @@ import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import AButton from "../components/ui/Button"
 
 const animationKeyframes = keyframes`
   0% { opacity: 0; transform: translateY(-10px); }
@@ -106,6 +107,7 @@ const Header = () => {
             >
               Contact Us
             </Button>
+            {/* <AButton Context={"Contact Us"}/> */}
           </ScrollLink>
         </Flex>
       </Box>
