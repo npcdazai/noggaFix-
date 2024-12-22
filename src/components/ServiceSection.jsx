@@ -6,7 +6,6 @@ import service from "../assets/service.png";
 import { NavLink } from "react-router-dom";
 import CustomButton from "../components/ui/Button";
 import { commonStyles } from "../styles/commonStyles";
-
 const servicesData = [
   {
     id: 1,
